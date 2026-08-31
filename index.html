@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script>
@@ -51,14 +51,14 @@
       overflow-x: hidden;
     }
     .warm-glass-card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(254, 205, 211, 0.45);
+      border: 1px solid rgba(254, 205, 211, 0.5);
       box-shadow: 0 10px 30px -10px rgba(251, 113, 133, 0.08), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
     }
     .warm-glass-nav {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(253, 230, 138, 0.5);
     }
@@ -71,7 +71,6 @@
       background: linear-gradient(135deg, #fef3c7 0%, #ffe4e6 100%);
       border: 1px solid #fecdd3;
     }
-    /* 自訂捲軸 */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -89,7 +88,7 @@
 </head>
 <body class="relative min-h-screen">
 
-  <!-- 柔和粉黃光暈動態 Canvas 背景 -->
+  <!-- 柔和粉黃光斑動態 Canvas 背景 -->
   <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
   <!-- 頂部導航列 -->
@@ -112,18 +111,18 @@
           <a href="#agenda" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">大會議程</a>
           <a href="#speakers" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">專題講座</a>
           <a href="#surveys" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">會前調查</a>
-          <a href="#downloads" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">資料下載</a>
-          <a href="#venue" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">交通方式</a>
-          <a href="#contact" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">聯絡承辦</a>
+          <a href="#downloads" class="px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50/80 hover:bg-rose-100 transition">無紙化資料</a>
+          <a href="#venue" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">交通與接駁</a>
+          <a href="#contact" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">聯絡窗口</a>
         </div>
 
         <div class="hidden sm:block">
-          <a href="#surveys" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
-            <i class="fa-solid fa-clipboard-check"></i> 會前調查填寫
+          <a href="#downloads" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
+            <i class="fa-solid fa-file-arrow-down"></i> 資料下載專區
           </a>
         </div>
 
-        <!-- 手機漢堡按鈕 -->
+        <!-- 手機選單按鈕 -->
         <div class="lg:hidden">
           <button id="mobile-menu-btn" class="text-slate-700 hover:text-rose-600 p-2 text-xl focus:outline-none">
             <i class="fa-solid fa-bars"></i>
@@ -132,13 +131,13 @@
       </div>
     </div>
 
-    <!-- 手機版展開選單 -->
+    <!-- 手機版選單 -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-rose-100 px-5 pt-3 pb-6 space-y-2 shadow-xl">
       <a href="#about" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">會議主旨</a>
       <a href="#agenda" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">大會議程</a>
       <a href="#speakers" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">專題講座</a>
       <a href="#surveys" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">會前調查</a>
-      <a href="#downloads" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">資料下載</a>
+      <a href="#downloads" class="block px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50">無紙化會議資料</a>
       <a href="#venue" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">交通與接駁</a>
       <a href="#contact" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">聯絡窗口</a>
     </div>
@@ -148,29 +147,24 @@
   <section class="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
-      <!-- 頂部徽章標籤 -->
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full gold-pink-badge text-rose-700 text-xs sm:text-sm font-bold mb-6 shadow-sm">
         <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
         新北教中字第115xxxxxxx號函核定辦理
       </div>
 
-      <!-- 主標題 -->
       <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight mb-6 text-slate-800">
         <span class="block mb-2 text-2xl sm:text-4xl md:text-5xl text-slate-700 font-extrabold">新北市115學年度</span>
         <span class="warm-gradient-text">國高中教務主任暨實習主任會議</span>
       </h1>
 
-      <!-- 副標說明 -->
       <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-10">
         因應數位轉型教育潮流，探討 AI 融入教務發展策略與校園法律實務。<br class="hidden sm:inline">
-        攜手各級中等學校教務與實習領航者，建立校際共識，共創智慧教育品質與成效！
+        攜手各級中等學校教務與實習領航者，建立校際共識，共創智慧教育成效！
       </p>
 
-      <!-- 重點資訊卡片列 -->
+      <!-- 重點卡片 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12 text-left">
-        
-        <!-- 時間 -->
-        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80 hover:shadow-md transition">
+        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80">
           <div class="flex items-center space-x-3.5">
             <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
               <i class="fa-regular fa-calendar-days"></i>
@@ -183,8 +177,7 @@
           </div>
         </div>
 
-        <!-- 地點 -->
-        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80 hover:shadow-md transition">
+        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80">
           <div class="flex items-center space-x-3.5">
             <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl flex-shrink-0">
               <i class="fa-solid fa-hotel"></i>
@@ -197,8 +190,7 @@
           </div>
         </div>
 
-        <!-- 對象 -->
-        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80 hover:shadow-md transition">
+        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80">
           <div class="flex items-center space-x-3.5">
             <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl flex-shrink-0">
               <i class="fa-solid fa-users-gear"></i>
@@ -206,13 +198,12 @@
             <div>
               <div class="text-xs text-slate-500 font-semibold">參加對象</div>
               <div class="text-sm font-bold text-slate-800">公私立高中職及國中</div>
-              <div class="text-xs text-slate-500">教務主任、實習主任及各科室代表</div>
+              <div class="text-xs text-slate-500">教務主任、實習主任及科室代表</div>
             </div>
           </div>
         </div>
 
-        <!-- 承辦單位 -->
-        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80 hover:shadow-md transition">
+        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80">
           <div class="flex items-center space-x-3.5">
             <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
               <i class="fa-solid fa-school-flag"></i>
@@ -224,27 +215,142 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <!-- 快捷行動按鈕 -->
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="#agenda" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
-          <i class="fa-solid fa-list-check"></i> 瀏覽當日完整議程
+        <a href="#downloads" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+          <i class="fa-solid fa-file-lines"></i> 前往無紙化會議資料區
         </a>
-        <a href="#surveys" class="px-7 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-rose-700 hover:text-rose-800 font-bold text-sm sm:text-base border border-rose-300 transition flex items-center gap-2 shadow-sm">
-          <i class="fa-solid fa-square-poll-vertical"></i> 填寫會前 AI 與法律調查
-        </a>
-        <a href="#venue" class="px-7 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-amber-700 hover:text-amber-800 font-bold text-sm sm:text-base border border-amber-300 transition flex items-center gap-2 shadow-sm">
-          <i class="fa-solid fa-van-shuttle"></i> 接駁專車與交通資訊
+        <a href="#agenda" class="px-7 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-slate-700 font-bold text-sm sm:text-base border border-slate-300 transition flex items-center gap-2 shadow-sm">
+          <i class="fa-solid fa-list-check"></i> 瀏覽當日議程
         </a>
       </div>
 
     </div>
   </section>
 
+  <!-- ==================== 四大核心無紙化資料下載區塊 ==================== -->
+  <section id="downloads" class="py-20 relative z-10 bg-white/70 border-y border-rose-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-rose-600 font-bold text-xs tracking-wider uppercase">Paperless Conference Documents</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-800 mt-2 mb-3">無紙化會議資料</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          為落實環保節能減碳，本次大會全面推動無紙化政策，現場不提供紙本手冊。<br>
+          會議相關文件於 <strong class="text-rose-600 font-bold">10月23日（五）起</strong> 開放線上下載使用。
+        </p>
+      </div>
+
+      <!-- 四大區塊網格 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- 區塊 1：實施計畫 -->
+        <div class="warm-glass-card rounded-3xl p-6 sm:p-7 border-2 border-rose-200 hover:border-rose-400 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-500/20 group-hover:scale-105 transition">
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-rose-100 text-rose-700 border border-rose-200">
+                區塊 01
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-2">1. 實施計畫</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              包含教育局核定公文字號、大會辦理目的、出席對象規範、獎勵額度（承辦學校校長嘉獎2次、主辦人員嘉獎2次等）及正式實施計畫全文。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-rose-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">格式：PDF 檔</span>
+            <a href="#" onclick="handleDownload(event, '1. 實施計畫_新北市115學年國高中教務主任暨實習主任會議.pdf')" class="px-5 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow-md shadow-rose-500/20">
+              <i class="fa-solid fa-download"></i> 下載實施計畫
+            </a>
+          </div>
+        </div>
+
+        <!-- 區塊 2：工作手冊 -->
+        <div class="warm-glass-card rounded-3xl p-6 sm:p-7 border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-2xl shadow-md shadow-amber-500/20 group-hover:scale-105 transition">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-200">
+                區塊 02
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-2">2. 工作手冊</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              涵蓋會議當日完整流程時程表、分組名冊、桌次圖、工作人員執掌分工、接駁專車時刻與會場淡水將捷鬱金香酒店配置動線說明。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-amber-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">格式：PDF 數位手冊</span>
+            <a href="#" onclick="handleDownload(event, '2. 大會工作手冊_115學年國高中教務主任暨實習主任會議.pdf')" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow-md shadow-amber-500/20">
+              <i class="fa-solid fa-download"></i> 下載工作手冊
+            </a>
+          </div>
+        </div>
+
+        <!-- 區塊 3：法規彙編 -->
+        <div class="warm-glass-card rounded-3xl p-6 sm:p-7 border-2 border-pink-200 hover:border-pink-400 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-400 text-white flex items-center justify-center text-2xl shadow-md shadow-pink-500/20 group-hover:scale-105 transition">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-pink-100 text-pink-700 border border-pink-200">
+                區塊 03
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-2">3. 法規彙編</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              彙整中等教育及技職實習重要法規、公立學校教師成績考核辦法、校園事件處理依據、性平調查實務與陳禹農律師校園法律實務法規指引。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-pink-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">格式：PDF 彙編手冊</span>
+            <a href="#" onclick="handleDownload(event, '3. 教務與實習法規彙編手冊.pdf')" class="px-5 py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow-md shadow-pink-500/20">
+              <i class="fa-solid fa-download"></i> 下載法規彙編
+            </a>
+          </div>
+        </div>
+
+        <!-- 區塊 4：講師簡報或相關資料下載 -->
+        <div class="warm-glass-card rounded-3xl p-6 sm:p-7 border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-500 text-white flex items-center justify-center text-2xl shadow-md shadow-orange-500/20 group-hover:scale-105 transition">
+                <i class="fa-solid fa-file-powerpoint"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-orange-100 text-orange-800 border border-orange-200">
+                區塊 04
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-2">4. 講師簡報或相關資料下載</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              提供彭智標主任「AI於教務工作之應用」、蔡宗翰教授講座資料、陳禹農律師「33個法律知識案例」、石碇高中閱讀經典案例及得獎教學示例打包下載。
+            </p>
+          </div>
+          <div class="pt-4 border-t border-orange-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-mono">格式：PPTX / ZIP 壓縮包</span>
+            <a href="#" onclick="handleDownload(event, '4. 講師簡報與專題研討資料包.zip')" class="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow-md shadow-orange-500/20">
+              <i class="fa-solid fa-download"></i> 下載簡報與資料
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 下載小提示 -->
+      <div class="mt-8 p-4 rounded-2xl bg-rose-50/70 border border-rose-200 text-center text-xs text-slate-600">
+        <i class="fa-solid fa-circle-info text-rose-500 mr-1.5"></i> 若檔案連結為 Google 雲端硬碟，點選下載按鈕後將在新分頁開啟檔案檢視與下載頁面。
+      </div>
+    </div>
+  </section>
+
   <!-- 會議三大核心目的 Section -->
-  <section id="about" class="py-20 relative z-10 bg-white/60 border-y border-rose-100">
+  <section id="about" class="py-20 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-rose-600 font-bold text-xs tracking-wider uppercase">Conference Objectives</span>
@@ -253,10 +359,8 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- 目的 1 -->
-        <div class="warm-glass-card rounded-3xl p-8 border border-rose-200 hover:border-rose-400 transition-all duration-300 group">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-rose-500/20 group-hover:scale-105 transition">
+        <div class="warm-glass-card rounded-3xl p-8 border border-rose-200">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-rose-500/20">
             <i class="fa-solid fa-microchip"></i>
           </div>
           <h3 class="text-lg font-bold text-slate-800 mb-3">AI 融入教務發展策略</h3>
@@ -265,9 +369,8 @@
           </p>
         </div>
 
-        <!-- 目的 2 -->
-        <div class="warm-glass-card rounded-3xl p-8 border border-amber-200 hover:border-amber-400 transition-all duration-300 group">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-amber-500/20 group-hover:scale-105 transition">
+        <div class="warm-glass-card rounded-3xl p-8 border border-amber-200">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-amber-500/20">
             <i class="fa-solid fa-network-wired"></i>
           </div>
           <h3 class="text-lg font-bold text-slate-800 mb-3">校際案例交流與校務管理</h3>
@@ -276,9 +379,8 @@
           </p>
         </div>
 
-        <!-- 目的 3 -->
-        <div class="warm-glass-card rounded-3xl p-8 border border-pink-200 hover:border-pink-400 transition-all duration-300 group">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-pink-500/20 group-hover:scale-105 transition">
+        <div class="warm-glass-card rounded-3xl p-8 border border-pink-200">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-400 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-pink-500/20">
             <i class="fa-solid fa-lightbulb"></i>
           </div>
           <h3 class="text-lg font-bold text-slate-800 mb-3">專家引領與實踐動能</h3>
@@ -286,13 +388,12 @@
             邀請學者專家分享及深化案例討論，強化教務及產業實習領導者對 AI 教育應用與校園法治事件的第一線實踐動能。
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- 大會議程 Section -->
-  <section id="agenda" class="py-20 relative z-10">
+  <section id="agenda" class="py-20 relative z-10 bg-white/50 border-t border-rose-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <span class="text-amber-600 font-bold text-xs tracking-wider uppercase">Conference Agenda</span>
@@ -301,8 +402,6 @@
       </div>
 
       <div class="space-y-4">
-
-        <!-- 09:00 - 09:20 報到 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-rose-200">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-rose-100 text-rose-700 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -316,7 +415,6 @@
           <span class="text-xs font-semibold bg-rose-50 text-rose-600 px-3 py-1 rounded-full border border-rose-200 self-start sm:self-center">樟樹實中團隊</span>
         </div>
 
-        <!-- 09:20 - 09:30 貴賓致詞 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-amber-200">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-amber-100 text-amber-700 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -330,7 +428,6 @@
           <span class="text-xs font-semibold bg-amber-50 text-amber-600 px-3 py-1 rounded-full border border-amber-200 self-start sm:self-center">樟樹實中團隊</span>
         </div>
 
-        <!-- 09:30 - 09:45 有功表揚 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-rose-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
@@ -347,7 +444,6 @@
           <span class="text-xs font-semibold text-rose-600 self-start sm:self-center">榮譽表揚</span>
         </div>
 
-        <!-- 09:45 - 10:00 閱讀頒獎 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-amber-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
@@ -364,7 +460,6 @@
           <span class="text-xs font-semibold text-amber-600 self-start sm:self-center">隆重頒獎</span>
         </div>
 
-        <!-- 09:55 - 10:15 石碇高中分享 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-rose-200">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-rose-100 text-rose-700 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -378,7 +473,6 @@
           <span class="text-xs font-semibold bg-rose-50 text-rose-600 px-3 py-1 rounded-full border border-rose-200 self-start sm:self-center">石碇高中</span>
         </div>
 
-        <!-- 10:15 - 10:30 茶敘時間 -->
         <div class="warm-glass-card rounded-2xl p-4 sm:p-5 bg-amber-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-amber-200/70">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-amber-200 text-amber-800 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -392,7 +486,6 @@
           <span class="text-xs font-medium text-amber-700 self-start sm:self-center">15 mins</span>
         </div>
 
-        <!-- 10:30 - 12:00 專題演講 AI -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-rose-300 bg-rose-50/40 flex flex-col justify-between gap-4">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div class="flex items-center space-x-4">
@@ -407,24 +500,11 @@
             <span class="text-xs font-bold bg-rose-200 text-rose-800 px-3 py-1 rounded-full self-start sm:self-center">90 mins 焦點專題</span>
           </div>
           <div class="bg-white/80 p-4 rounded-xl border border-rose-100 text-xs sm:text-sm text-slate-600 space-y-2">
-            <div class="flex items-start gap-2">
-              <i class="fa-solid fa-user-tie text-rose-500 mt-1"></i>
-              <div>
-                <strong class="text-slate-800">主講講師：彭智標 主任</strong>（苗栗縣永貞國小 / 臺灣教育產業工會副理事長）<br>
-                <span class="text-slate-500">專長於找到行政工作底層規律，化繁為簡，賦能教務行政效能。</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-2 pt-2 border-t border-rose-100">
-              <i class="fa-solid fa-book-sparkles text-amber-500 mt-1"></i>
-              <div>
-                <strong class="text-slate-800">主講講師：蔡宗翰 教授（待定）</strong>（中央大學資工系 / 中研院人社中心 /「AI界李白」）<br>
-                <span class="text-slate-500">《寫給中學生看的AI課》作者，橫跨資工與人文的數位科技教育引領者。</span>
-              </div>
-            </div>
+            <p><strong>講師：彭智標 主任</strong>（苗栗縣永貞國小 / 臺灣教育產業工會副理事長）</p>
+            <p><strong>講師：蔡宗翰 教授（待定）</strong>（中央大學資工系 / 中研院人社中心 /《寫給中學生看的AI課》作者）</p>
           </div>
         </div>
 
-        <!-- 12:00 - 13:30 午餐 -->
         <div class="warm-glass-card rounded-2xl p-4 sm:p-5 bg-amber-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-amber-200/70">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-amber-200 text-amber-800 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -438,7 +518,6 @@
           <span class="text-xs font-semibold text-amber-700 self-start sm:self-center">午餐休憩</span>
         </div>
 
-        <!-- 13:30 - 16:00 法律案例討論 -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-amber-300 bg-amber-50/40 flex flex-col justify-between gap-4">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div class="flex items-center space-x-4">
@@ -452,23 +531,12 @@
             </div>
             <span class="text-xs font-bold bg-amber-200 text-amber-800 px-3 py-1 rounded-full self-start sm:self-center">150 mins 實戰對談</span>
           </div>
-          <div class="bg-white/80 p-4 rounded-xl border border-amber-100 text-xs sm:text-sm text-slate-600 space-y-2">
-            <div class="flex items-start gap-2">
-              <i class="fa-solid fa-scale-balanced text-amber-600 mt-1"></i>
-              <div>
-                <strong class="text-slate-800">主講講師：陳禹農 律師</strong>（構思法律事務所負責人 / 教育部校園性別事件調查專業人員）<br>
-                <span class="text-slate-500">著作：《律師帶你看校園大小事2》</span>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2 pt-2 border-t border-amber-100 text-xs text-slate-700">
-              <div class="p-2 bg-amber-50/70 rounded-lg"><strong>1. 重要法律依據</strong><br>校園事件核心法規與行政程序</div>
-              <div class="p-2 bg-amber-50/70 rounded-lg"><strong>2. 常見案例解析</strong><br>教學、輔導與行政實務法律疑難</div>
-              <div class="p-2 bg-amber-50/70 rounded-lg"><strong>3. 第一線實務因應</strong><br>教務與實習主任標準處置策略</div>
-            </div>
+          <div class="bg-white/80 p-4 rounded-xl border border-amber-100 text-xs sm:text-sm text-slate-600 space-y-1">
+            <p><strong>主講講師：陳禹農 律師</strong>（構思法律事務所負責人 / 《律師帶你看校園大小事2》作者）</p>
+            <p class="text-slate-500">深入解析：1.校園事件重要法律依據 2.常見案例法律解析 3.第一線實務因應方式</p>
           </div>
         </div>
 
-        <!-- 16:00 賦歸 -->
         <div class="warm-glass-card rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-slate-200">
           <div class="flex items-start sm:items-center space-x-4">
             <div class="px-3.5 py-1.5 rounded-xl bg-slate-200 text-slate-700 font-bold text-sm tracking-wider font-mono flex-shrink-0">
@@ -481,14 +549,12 @@
           </div>
           <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-3 py-1 rounded-full border border-slate-200 self-start sm:self-center">順利賦歸</span>
         </div>
-
       </div>
-      <p class="text-xs text-slate-400 text-center mt-4">* 活動當日流程將視現場貴賓致詞及研討情況進行彈性微調。</p>
     </div>
   </section>
 
   <!-- 專題講師介紹 Section -->
-  <section id="speakers" class="py-20 relative z-10 bg-white/50 border-t border-rose-100">
+  <section id="speakers" class="py-20 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-rose-600 font-bold text-xs tracking-wider uppercase">Keynote Experts</span>
@@ -497,8 +563,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- 講者 1: 彭智標 主任 -->
         <div class="warm-glass-card rounded-3xl p-7 border border-rose-200 flex flex-col justify-between hover:shadow-lg transition">
           <div>
             <div class="flex items-center space-x-4 mb-5">
@@ -511,22 +575,16 @@
                 <p class="text-xs text-slate-500">苗栗縣永貞國小 / 臺灣教育產業工會副理事長</p>
               </div>
             </div>
-            <div class="space-y-3">
-              <div class="text-xs text-amber-700 bg-amber-50 p-2.5 rounded-xl border border-amber-200 font-medium">
-                <strong>核心專長：</strong>行政工作底層規律拆解、流程化繁為簡、教育現場行政減負策略。
-              </div>
-              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                兼任苗栗縣各級學校產業公會副理事長，長期致力於研究如何運用新科技與結構性思考，協助學校行政同仁從繁複庶務中解放。
-              </p>
-            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              專長於找到行政工作底層規律，化繁為簡，致力於探討如何運用 AI 與結構化工具為教育現場行政減負。
+            </p>
           </div>
           <div class="pt-4 mt-6 border-t border-rose-100 flex items-center justify-between text-xs text-slate-500">
-            <span><i class="fa-regular fa-clock mr-1 text-rose-500"></i> 10:30 - 12:00</span>
+            <span>10:30 - 12:00</span>
             <span class="font-semibold text-rose-600">AI 教務工作應用</span>
           </div>
         </div>
 
-        <!-- 講者 2: 蔡宗翰 教授 (待定) -->
         <div class="warm-glass-card rounded-3xl p-7 border border-amber-200 flex flex-col justify-between hover:shadow-lg transition">
           <div>
             <div class="flex items-center space-x-4 mb-5">
@@ -539,25 +597,18 @@
                   <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">待定</span>
                 </div>
                 <p class="text-xs text-slate-500">中央大學資工系 / 中研院人社中心</p>
-                <span class="text-xs font-semibold text-amber-600">被譽為「AI 界李白」</span>
               </div>
             </div>
-            <div class="space-y-3">
-              <div class="text-xs text-rose-700 bg-rose-50 p-2.5 rounded-xl border border-rose-200 font-medium">
-                <strong>著作代表：</strong>《寫給中學生看的AI課》
-              </div>
-              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                研究涵蓋自然語言處理與電腦視覺，並將 AI 技術用於人文研究（數位人文）。擅長作詩與寫作，為全臺罕見兼具深厚理工與人文底蘊的頂尖學者。
-              </p>
-            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              被譽為「AI 界李白」，《寫給中學生看的AI課》作者，橫跨理工與人文領域，深耕生成式 AI 數位人文教育。
+            </p>
           </div>
           <div class="pt-4 mt-6 border-t border-amber-100 flex items-center justify-between text-xs text-slate-500">
-            <span><i class="fa-regular fa-clock mr-1 text-amber-500"></i> 10:30 - 12:00</span>
+            <span>10:30 - 12:00</span>
             <span class="font-semibold text-amber-600">AI 教學現場跨域</span>
           </div>
         </div>
 
-        <!-- 講者 3: 陳禹農 律師 -->
         <div class="warm-glass-card rounded-3xl p-7 border border-pink-200 flex flex-col justify-between hover:shadow-lg transition">
           <div>
             <div class="flex items-center space-x-4 mb-5">
@@ -570,26 +621,21 @@
                 <p class="text-xs text-slate-500">構思法律事務所負責人 / 教育部校園性別事件調查專業人員</p>
               </div>
             </div>
-            <div class="space-y-3">
-              <div class="text-xs text-pink-700 bg-pink-50 p-2.5 rounded-xl border border-pink-200 font-medium">
-                <strong>參考書籍：</strong>《律師帶你看校園大小事2》
-              </div>
-              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                精選「老師要知道的 33 個法律知識」，從真實案例出發，深度剖析校園事件法律法規依據與主任在第一線處置時的關鍵自保與應對心法。
-              </p>
-            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              《律師帶你看校園大小事2》作者，以 33 個法律知識精闢剖析校園第一線常見爭端與主任因應之道。
+            </p>
           </div>
           <div class="pt-4 mt-6 border-t border-pink-100 flex items-center justify-between text-xs text-slate-500">
-            <span><i class="fa-regular fa-clock mr-1 text-pink-500"></i> 13:30 - 16:00</span>
-           </div>
+            <span>13:30 - 16:00</span>
+            <span class="font-semibold text-pink-600">校園法治 33 講</span>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- 會前問卷調查專區 Section (AI + 法律) -->
-  <section id="surveys" class="py-20 relative z-10">
+  <!-- 會前問卷調查專區 Section -->
+  <section id="surveys" class="py-20 relative z-10 bg-white/60 border-t border-rose-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
         <span class="text-rose-600 font-bold text-xs tracking-wider uppercase">Pre-Conference Survey</span>
@@ -598,8 +644,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- 調查 1: AI 使用狀況調查 -->
         <div class="warm-glass-card rounded-3xl p-7 border-2 border-rose-200 flex flex-col justify-between">
           <div>
             <div class="flex items-center space-x-4 mb-4">
@@ -612,15 +656,14 @@
               </div>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              蒐集各校目前在行政排課、成績分析、生成式 AI 工具導入教學之現況與所遇瓶頸，以供彭智標主任及蔡宗翰教授於講座時進行精準解析。
+              蒐集各校在行政排課、成績分析、生成式 AI 工具導入教學之現況與所遇瓶頸，以供講師進行精準解析。
             </p>
           </div>
-          <button onclick="openSurveyModal('AI使用狀況調查')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold text-sm transition shadow-md shadow-rose-500/20 flex items-center justify-center gap-2">
-            <i class="fa-solid fa-pen-to-square"></i> 立即填寫 AI 使用現況調查
+          <button onclick="openSurveyModal('AI使用狀況調查')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 text-white font-bold text-sm transition shadow-md shadow-rose-500/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-pen-to-square"></i> 立即填寫 AI 現況調查
           </button>
         </div>
 
-        <!-- 調查 2: 校園法律議題調查 -->
         <div class="warm-glass-card rounded-3xl p-7 border-2 border-amber-200 flex flex-col justify-between">
           <div>
             <div class="flex items-center space-x-4 mb-4">
@@ -633,88 +676,14 @@
               </div>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              蒐集各校教務與實習行政常遇到的管教權限等法律疑惑，陳禹農律師將於下午場親自逐一解析。
+              蒐集各校常遇到的管教權限、學生著作權、校外實習合約等法律疑惑，陳禹農律師將親自解答。
             </p>
           </div>
-          <button onclick="openSurveyModal('校園法律議題調查')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold text-sm transition shadow-md shadow-amber-500/20 flex items-center justify-center gap-2">
-            <i class="fa-solid fa-pen-to-square"></i> 立即提出校園法律案例疑惑
+          <button onclick="openSurveyModal('校園法律議題調查')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 text-white font-bold text-sm transition shadow-md shadow-amber-500/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-pen-to-square"></i> 立即提出法律案例疑惑
           </button>
         </div>
-
       </div>
-
-      <!-- 報名與研習時數提醒 -->
-      <div class="mt-8 warm-glass-card rounded-2xl p-6 border border-amber-300 bg-amber-50/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center space-x-4">
-          <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg flex-shrink-0">
-            <i class="fa-solid fa-bell"></i>
-          </div>
-          <div>
-            <h4 class="text-sm font-bold text-slate-800">校務行政系統研習登錄與用餐調查</h4>
-            <p class="text-xs text-slate-600 mt-0.5">請逕至新北市校務行政系統之「教師研習系統」完成報名並選擇用餐（葷食/素食），全程參與核發 7 小時研習時數。</p>
-          </div>
-        </div>
-        <a href="https://esa.ntpc.edu.tw" target="_blank" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm whitespace-nowrap transition">
-          前往校務行政系統 <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 資料下載專區 Section -->
-  <section id="downloads" class="py-20 relative z-10 bg-white/60 border-t border-rose-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-amber-600 font-bold text-xs tracking-wider uppercase">Digital Downloads</span>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-800 mt-2 mb-3">無紙化會議資料下載</h2>
-        <p class="text-slate-600 text-sm">為落實環保節能減碳，本次會議不提供紙本資料。相關文件於 10月23日（五）起開放下載。</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-        <!-- 下載 1 -->
-        <div class="warm-glass-card rounded-2xl p-5 flex items-center justify-between border border-rose-200 hover:border-rose-400 transition">
-          <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl flex-shrink-0">
-              <i class="fa-solid fa-file-pdf"></i>
-            </div>
-            <div>
-              <h4 class="text-sm sm:text-base font-bold text-slate-800">115學年國高中教務暨實習主任會議實施計畫 (PDF)</h4>
-              <p class="text-xs text-slate-500 mt-0.5">含計畫目的、大會議程與獎勵要點 (10/23開放)</p>
-            </div>
-          </div>
-          <button onclick="downloadAlert('115學年國高中教務主任暨實習主任會議實施計畫.pdf')" class="px-4 py-2 rounded-xl bg-rose-50 hover:bg-rose-500 text-rose-700 hover:text-white text-xs font-bold transition flex items-center gap-1.5 flex-shrink-0 border border-rose-200">
-            <i class="fa-solid fa-download"></i> 下載
-          </button>
-        </div>
-
-        <!-- 下載 2 -->
-        <div class="warm-glass-card rounded-2xl p-5 flex items-center justify-between border border-amber-200 hover:border-amber-400 transition">
-          <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
-              <i class="fa-solid fa-file-powerpoint"></i>
-            </div>
-            </div>
-               <button onclick="downloadAlert('115學年國高中教務主任暨實習主任會議工作手冊.pdf')" class="px-4 py-2 rounded-xl bg-rose-50 hover:bg-rose-500 text-rose-700 hover:text-white text-xs font-bold transition flex items-center gap-1.5 flex-shrink-0 border border-rose-200">
-            <i class="fa-solid fa-download"></i> 下載
-          </button>
-       </div>  
-   
-       <!-- 下載 3 -->
-        <div class="warm-glass-card rounded-2xl p-5 flex items-center justify-between border border-amber-200 hover:border-amber-400 transition">
-          <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
-              <i class="fa-solid fa-file-powerpoint"></i>
-            </div>
-            </div>
-              <button onclick="downloadAlert('115學年國高中教務主任暨實習主任會議講師簡報檔.pdf')" class="px-4 py-2 rounded-xl bg-rose-50 hover:bg-rose-500 text-rose-700 hover:text-white text-xs font-bold transition flex items-center gap-1.5 flex-shrink-0 border border-rose-200">
-            <i class="fa-solid fa-download"></i> 下載
-            </div>
-          </div>
-            <i class="fa-solid fa-download"></i> 下載
-          </button>
-        </div>  
     </div>
   </section>
 
@@ -728,8 +697,6 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        <!-- 交通 1: 大會專車接駁 -->
         <div class="warm-glass-card rounded-3xl p-7 border-2 border-rose-300 bg-rose-50/30">
           <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-rose-500/20">
             <i class="fa-solid fa-van-shuttle"></i>
@@ -738,20 +705,19 @@
           <ul class="text-xs sm:text-sm text-slate-600 space-y-3">
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-check text-rose-500 text-xs mt-1"></i>
-              <span><strong>早晨集合時間：</strong>會議當日（11/3）上午 <strong>08:30</strong> 準時集合發車。</span>
+              <span><strong>早晨集合發車：</strong>11/3 上午 <strong>08:30 準時發車</strong>。</span>
             </li>
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-check text-rose-500 text-xs mt-1"></i>
-              <span><strong>集合地點：</strong><strong>捷運淡水站</strong>（若有更動將另行發函/簡訊通知）。</span>
+              <span><strong>集合地點：</strong><strong>捷運淡水站</strong>（若有更動將另行通知）。</span>
             </li>
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-check text-rose-500 text-xs mt-1"></i>
-              <span><strong>下午賦歸接駁：</strong>大會閉幕後（約 16:00 起）安排專車返回淡水捷運站。</span>
+              <span><strong>賦歸接駁：</strong>16:00 閉幕後安排專車返回淡水捷運站。</span>
             </li>
           </ul>
         </div>
 
-        <!-- 交通 2: 自行搭乘大眾運輸 -->
         <div class="warm-glass-card rounded-3xl p-7 border border-amber-200">
           <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-amber-500/20">
             <i class="fa-solid fa-bus"></i>
@@ -760,16 +726,15 @@
           <ul class="text-xs sm:text-sm text-slate-600 space-y-3">
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-check text-amber-500 text-xs mt-1"></i>
-              <span><strong>淡水捷運站公車轉乘：</strong>搭乘紅26、836、857公車至「滬尾砲台站」下車，步行約 3 分鐘即可抵達園區。</span>
+              <span><strong>公車轉乘：</strong>淡水站轉乘紅26、836、857至「滬尾砲台站」，步行 3 分鐘抵達。</span>
             </li>
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-check text-amber-500 text-xs mt-1"></i>
-              <span><strong>淡海輕軌轉乘：</strong>搭乘至「藍海線 - 沙崙站」或轉乘公車。</span>
+              <span><strong>淡海輕軌：</strong>搭乘至「藍海線 - 沙崙站」轉乘。</span>
             </li>
           </ul>
         </div>
 
-        <!-- 交通 3: 自行開車注意事項 -->
         <div class="warm-glass-card rounded-3xl p-7 border border-slate-200">
           <div class="w-12 h-12 rounded-2xl bg-slate-700 text-white flex items-center justify-center text-xl mb-4 shadow-md">
             <i class="fa-solid fa-square-parking"></i>
@@ -778,15 +743,14 @@
           <ul class="text-xs sm:text-sm text-slate-600 space-y-3">
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-triangle-exclamation text-amber-500 text-xs mt-1"></i>
-              <span><strong>停車費用自理：</strong>依實施計畫規定，本次會議活動<strong>不提供免費停車折抵</strong>。</span>
+              <span><strong>停車費用自理：</strong>依實施計畫規定，本次會議<strong>不提供免費停車折抵</strong>。</span>
             </li>
             <li class="flex items-start gap-2">
               <i class="fa-solid fa-circle-info text-slate-400 text-xs mt-1"></i>
-              <span><strong>周邊收費停車場：</strong>滬尾藝文休閒園區地下停車場（依現場費率計費）。</span>
+              <span><strong>收費停車場：</strong>滬尾藝文休閒園區地下收費停車場。</span>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -801,8 +765,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- 承辦學校 -->
         <div class="warm-glass-card rounded-3xl p-6 border-2 border-rose-200">
           <div class="flex items-center space-x-3.5 mb-4">
             <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-xl flex-shrink-0">
@@ -820,7 +782,6 @@
           </div>
         </div>
 
-        <!-- 主辦單位 -->
         <div class="warm-glass-card rounded-3xl p-6 border-2 border-amber-200">
           <div class="flex items-center space-x-3.5 mb-4">
             <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl flex-shrink-0">
@@ -837,7 +798,6 @@
             <p><strong>電子信箱：</strong><a href="mailto:af9916@ntpc.gov.tw" class="text-amber-600 hover:underline">af9916@ntpc.gov.tw</a></p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -859,15 +819,15 @@
     </div>
   </footer>
 
-  <!-- 調查填寫互動彈窗 (Modal) -->
+  <!-- 調查彈窗 Modal -->
   <div id="survey-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="warm-glass-card bg-white max-w-lg w-full rounded-3xl p-6 sm:p-8 shadow-2xl border border-rose-200 relative animate-fade-in">
+    <div class="warm-glass-card bg-white max-w-lg w-full rounded-3xl p-6 sm:p-8 shadow-2xl border border-rose-200 relative">
       <button onclick="closeSurveyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-xl focus:outline-none">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <div class="flex items-center space-x-3 mb-4">
-        <div id="modal-icon-container" class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg">
+        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg">
           <i class="fa-solid fa-pen-nib"></i>
         </div>
         <h3 id="modal-title" class="text-lg font-bold text-slate-800">填寫會前調查</h3>
@@ -876,27 +836,26 @@
       <form id="modal-form" class="space-y-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1">服務學校 <span class="text-rose-500">*</span></label>
-          <input type="text" required placeholder="例如：新北市立樟樹實中" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500">
+          <input type="text" required placeholder="例如：新北市立樟樹實中" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1">職稱與姓名 <span class="text-rose-500">*</span></label>
-          <input type="text" required placeholder="例如：教務主任 ○○○" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500">
+          <input type="text" required placeholder="例如：教務主任 ○○○" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1">調查填答 / 提問案例內容 <span class="text-rose-500">*</span></label>
-          <textarea required rows="4" placeholder="請填寫學校現況說明或您希望講師於會議中解析的案例..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500"></textarea>
+          <textarea required rows="4" placeholder="請填寫學校現況說明或您希望講師於會議中解析的案例..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-rose-500"></textarea>
         </div>
         <div class="flex justify-end gap-3 pt-2">
           <button type="button" onclick="closeSurveyModal()" class="px-4 py-2 rounded-xl text-slate-600 font-semibold text-xs hover:bg-slate-100">取消</button>
-          <button type="submit" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs shadow-md shadow-rose-500/20">確認送出調查</button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 text-white font-bold text-xs shadow-md shadow-rose-500/20">確認送出調查</button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- 互動腳本與柔和粉黃光暈背景動畫 -->
+  <!-- 互動腳本與柔和粉黃背景動畫 -->
   <script>
-    // 手機選單開關
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
@@ -906,12 +865,17 @@
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
 
-    // 檔案下載提醒
-    function downloadAlert(filename) {
-      alert(`【檔案下載】已觸發下載：${filename}\n（配合無紙化政策，正式電子檔將於 10月23日 起全面開放下載）`);
+    // 檔案下載提醒與觸發
+    function handleDownload(e, filename) {
+      // 若後續有具體 Google Drive 連結，直接將 a 標籤的 href 替換為實際雲端硬碟網址即可
+      const link = e.currentTarget.getAttribute('href');
+      if (link === '#') {
+        e.preventDefault();
+        alert(`【下載提醒】您點選了：${filename}\n\n（依實施計畫規定，各項無紙化會議檔案將於 10月23日(五) 起全面開放線上下載）`);
+      }
     }
 
-    // 調查 Modal
+    // Modal 控制
     const modal = document.getElementById('survey-modal');
     const modalTitle = document.getElementById('modal-title');
     function openSurveyModal(title) {
@@ -928,7 +892,7 @@
       e.target.reset();
     });
 
-    // 柔和粉色與暖黃色流動浮游光斑 Canvas 特效
+    // 柔和粉黃光暈背景動畫
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
@@ -941,10 +905,10 @@
 
     const bubbles = [];
     const colors = [
-      'rgba(251, 113, 133, 0.15)', // 粉紅
-      'rgba(245, 158, 11, 0.12)',  // 暖黃
-      'rgba(253, 230, 138, 0.2)',  // 淺金黃
-      'rgba(254, 205, 211, 0.25)'  // 櫻花粉
+      'rgba(251, 113, 133, 0.15)',
+      'rgba(245, 158, 11, 0.12)',
+      'rgba(253, 230, 138, 0.2)',
+      'rgba(254, 205, 211, 0.25)'
     ];
 
     for (let i = 0; i < 28; i++) {
@@ -960,7 +924,6 @@
 
     function animate() {
       ctx.clearRect(0, 0, width, height);
-
       for (let i = 0; i < bubbles.length; i++) {
         const b = bubbles[i];
         b.x += b.vx;
@@ -974,7 +937,6 @@
         ctx.fillStyle = b.color;
         ctx.fill();
       }
-
       requestAnimationFrame(animate);
     }
     animate();
