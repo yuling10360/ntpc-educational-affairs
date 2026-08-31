@@ -84,6 +84,11 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #fb7185;
     }
+  
+    /* AI 會議小助手 */
+    .ai-fab{position:fixed;right:24px;bottom:24px;z-index:70;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:#fff;box-shadow:0 14px 35px rgba(225,29,72,.28);display:flex;align-items:center;justify-content:center;font-size:25px;cursor:pointer;border:0;transition:.2s}.ai-fab:hover{transform:translateY(-3px) scale(1.03)}
+    .ai-chat{position:fixed;right:24px;bottom:100px;z-index:70;width:min(390px,calc(100vw - 32px));height:540px;max-height:70vh;background:rgba(255,255,255,.98);border:1px solid rgba(254,205,211,.9);border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,.2);display:none;overflow:hidden;flex-direction:column}.ai-chat.open{display:flex}.ai-header{padding:16px 18px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:white;display:flex;align-items:center;justify-content:space-between}.ai-messages{flex:1;overflow-y:auto;padding:16px;background:#fffaf8}.ai-msg{max-width:88%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:14px;line-height:1.6;white-space:pre-wrap}.ai-bot{background:white;border:1px solid #fde2e7;color:#334155}.ai-user{background:#ffe4e6;margin-left:auto;color:#881337}.ai-suggestions{padding:8px 14px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #f1f5f9}.ai-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff1f2;color:#be123c;border:1px solid #fecdd3;cursor:pointer}.ai-input{display:flex;padding:12px;gap:8px;border-top:1px solid #e2e8f0;background:white}.ai-input input{flex:1;border:1px solid #cbd5e1;border-radius:14px;padding:10px 12px;outline:none}.ai-send{border:0;border-radius:14px;padding:0 14px;background:#e11d48;color:#fff;cursor:pointer}
+
   </style>
 </head>
 <body class="relative min-h-screen">
@@ -915,6 +920,17 @@
     </div>
   </footer>
 
+
+  <!-- AI 會議小助手 -->
+  <div id="ai-chat" class="ai-chat" aria-label="AI 會議小助手">
+    <div class="ai-header"><div class="font-bold"><i class="fa-solid fa-robot mr-2"></i>AI 會議小助手</div><button id="ai-close" class="text-white text-xl" aria-label="關閉">&times;</button></div>
+    <div id="ai-messages" class="ai-messages"><div class="ai-msg ai-bot">您好！我是「115學年度國高中教務主任暨實習主任會議」小助手 🤖<br>我可以協助回答會議日期、地點、交通、接駁、議程、講師與聯絡資訊。</div></div>
+    <div class="ai-suggestions"><button class="ai-chip">會議幾點開始？</button><button class="ai-chip">會議地點在哪裡？</button><button class="ai-chip">有接駁車嗎？</button><button class="ai-chip">有哪些講師？</button></div>
+    <form id="ai-form" class="ai-input"><input id="ai-question" placeholder="請輸入您的問題…" autocomplete="off"><button class="ai-send" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
+  </div>
+  <button id="ai-fab" class="ai-fab" aria-label="開啟 AI 會議小助手"><i class="fa-solid fa-robot"></i></button>
+
+
   <!-- 互動腳本與柔和粉黃背景動畫 -->
   <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -991,6 +1007,24 @@
       requestAnimationFrame(animate);
     }
     animate();
+
+    // AI 會議小助手（第一階段：會議專屬知識庫）
+    const aiFab=document.getElementById('ai-fab'), aiChat=document.getElementById('ai-chat'), aiClose=document.getElementById('ai-close'), aiMessages=document.getElementById('ai-messages'), aiForm=document.getElementById('ai-form'), aiQuestion=document.getElementById('ai-question');
+    const meetingQA=[
+      {keys:['日期','幾號','什麼時候','開始','時間'],answer:'本次會議日期與時間，請以網站首頁及大會議程公布的最新資訊為準。'},
+      {keys:['地點','在哪','地址','會場'],answer:'會議地點資訊請參閱網站首頁「會議資訊」區塊。'},
+      {keys:['接駁','捷運','淡水站'],answer:'有關接駁資訊，請參閱網站的「交通與接駁資訊」區塊。'},
+      {keys:['停車','開車','自駕'],answer:'自行開車與停車資訊，請參閱網站的「自行開車與停車指引」區塊。'},
+      {keys:['講師','演講','專題'],answer:'本次專題講師與演講資訊，請參閱網站的「專題講師介紹」區塊。'},
+      {keys:['調查','表單','填寫'],answer:'您可以點選網站上的「填寫會前調查」或相關表單連結前往填寫。'},
+      {keys:['聯絡','電話','信箱','窗口'],answer:'承辦與主辦單位的聯絡資訊，請參閱網站最下方的「聯絡資訊」區塊。'},
+      {keys:['議程','流程'],answer:'完整會議流程請點選網站導覽列的「大會議程」，即可查看最新議程內容。'}
+    ];
+    function addMsg(text,who='bot'){const d=document.createElement('div');d.className='ai-msg '+(who==='user'?'ai-user':'ai-bot');d.textContent=text;aiMessages.appendChild(d);aiMessages.scrollTop=aiMessages.scrollHeight;}
+    function answerAI(q){const hit=meetingQA.find(item=>item.keys.some(k=>q.includes(k)));return hit?hit.answer:'我目前是「會議專屬小助手」，可以協助回答會議日期、地點、交通接駁、停車、議程、講師、會前調查與聯絡資訊。您也可以換個方式再問一次 😊';}
+    function askAI(q){q=q.trim();if(!q)return;addMsg(q,'user');setTimeout(()=>addMsg(answerAI(q),'bot'),250);aiQuestion.value='';}
+    aiFab.addEventListener('click',()=>{aiChat.classList.add('open');aiQuestion.focus();});aiClose.addEventListener('click',()=>aiChat.classList.remove('open'));aiForm.addEventListener('submit',e=>{e.preventDefault();askAI(aiQuestion.value);});document.querySelectorAll('.ai-chip').forEach(b=>b.addEventListener('click',()=>askAI(b.textContent)));
+
   </script>
 </body>
 </html>
