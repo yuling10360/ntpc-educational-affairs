@@ -1011,17 +1011,17 @@
     // AI 會議小助手（第一階段：會議專屬知識庫）
     const aiFab=document.getElementById('ai-fab'), aiChat=document.getElementById('ai-chat'), aiClose=document.getElementById('ai-close'), aiMessages=document.getElementById('ai-messages'), aiForm=document.getElementById('ai-form'), aiQuestion=document.getElementById('ai-question');
     const meetingQA=[
-      {keys:['日期','幾號','什麼時候','開始','時間'],answer:'本次會議日期與時間，請以網站首頁及大會議程公布的最新資訊為準。'},
-      {keys:['地點','在哪','地址','會場'],answer:'會議地點資訊請參閱網站首頁「會議資訊」區塊。'},
-      {keys:['接駁','捷運','淡水站'],answer:'有關接駁資訊，請參閱網站的「交通與接駁資訊」區塊。'},
-      {keys:['停車','開車','自駕'],answer:'自行開車與停車資訊，請參閱網站的「自行開車與停車指引」區塊。'},
-      {keys:['講師','演講','專題'],answer:'本次專題講師與演講資訊，請參閱網站的「專題講師介紹」區塊。'},
-      {keys:['調查','表單','填寫'],answer:'您可以點選網站上的「填寫會前調查」或相關表單連結前往填寫。'},
-      {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'會前問卷是為了瞭解各校 AI 融入教務行政與教學的使用現況、導入瓶頸與需求，以及第一線常見的校園法律實務議題。調查結果將提供給專題講師，協助講師在會議研討與現場對談時，更精準回應大家的實務問題，因此請全體與會教務主任、實習主任於會前完成填寫。'},
-      {keys:['如何報名','怎麼報名','報名方式','我要報名','研習登錄'],answer:'請登入新北市校務行政系統，進入「教師研習系統」完成本次會議的研習登錄，並同步填寫用餐調查（葷／素）。全程參與者可核發 7 小時研習時數。'},
-      {keys:['聯絡','電話','信箱','窗口'],answer:'承辦與主辦單位的聯絡資訊，請參閱網站最下方的「聯絡資訊」區塊。'},
-      {keys:['議程','流程'],answer:'完整會議流程請點選網站導覽列的「大會議程」，即可查看最新議程內容。'},
-      {keys:['會議資料何時提供','資料何時提供','會議資料','資料什麼時候','何時提供資料'],answer:'會議資料將於會議前提供，請持續留意本網站「無紙化資料」區塊的最新公告與下載資訊。'}
+      {keys:['日期','幾號','什麼時候','開始','時間'],answer:'115年11月3日（星期二）09:00開始。'},
+      {keys:['地點','在哪','地址','會場'],answer:'淡水將捷鬱金香酒店。'},
+      {keys:['接駁','捷運','淡水站'],answer:'有。'},
+      {keys:['停車','開車','自駕'],answer:'有地下收費停車場。'},
+      {keys:['講師','演講','專題'],answer:'彭智標主任、蔡宗翰教授、陳禹農律師。'},
+      {keys:['調查','表單','填寫'],answer:'請點選網站上的「前往填寫調查表單」。'},
+      {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'為了蒐集各校AI使用現況、導入需求及校園法律實務問題，提供講師作為會議研討參考。'},
+      {keys:['如何報名','怎麼報名','報名方式','我要報名','研習登錄'],answer:'請登入新北市校務行政系統的「教師研習系統」完成登錄。'},
+      {keys:['聯絡','電話','信箱','窗口'],answer:'請參閱網站最下方的「聯絡資訊」。'},
+      {keys:['議程','流程'],answer:'請點選網站導覽列的「大會議程」。'},
+      {keys:['會議資料何時提供','資料何時提供','會議資料','資料什麼時候','何時提供資料'],answer:'會議前提供。'}
     ];
     function addMsg(text,who='bot'){const d=document.createElement('div');d.className='ai-msg '+(who==='user'?'ai-user':'ai-bot');d.textContent=text;aiMessages.appendChild(d);aiMessages.scrollTop=aiMessages.scrollHeight;}
     function answerAI(q){const hit=meetingQA.find(item=>item.keys.some(k=>q.includes(k)));return hit?hit.answer:'我目前是「會議專屬小助手」，可以協助回答會議日期、地點、交通接駁、停車、議程、講師、會前調查與聯絡資訊。您也可以換個方式再問一次 😊';}
