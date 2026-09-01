@@ -925,7 +925,7 @@
   <div id="ai-chat" class="ai-chat" aria-label="AI 會議小助手">
     <div class="ai-header"><div class="font-bold"><i class="fa-solid fa-robot mr-2"></i>AI 會議小助手</div><button id="ai-close" class="text-white text-xl" aria-label="關閉">&times;</button></div>
     <div id="ai-messages" class="ai-messages"><div class="ai-msg ai-bot">您好！我是「115學年度國高中教務主任暨實習主任會議」小助手 🤖<br>我可以協助回答會議日期、地點、交通、接駁、議程、講師與聯絡資訊。</div></div>
-    <div class="ai-suggestions"><button class="ai-chip">會議幾點開始？</button><button class="ai-chip">會議地點在哪裡？</button><button class="ai-chip">有接駁車嗎？</button><button class="ai-chip">有哪些講師？</button><button class="ai-chip">為何要寫問卷？</button><button class="ai-chip">如何報名？</button></div>
+    <div class="ai-suggestions"><button class="ai-chip">會議幾點開始？</button><button class="ai-chip">會議地點在哪裡？</button><button class="ai-chip">有接駁車嗎？</button><button class="ai-chip">有哪些講師？</button><button class="ai-chip">為何要寫問卷？</button><button class="ai-chip">如何報名？</button><button class="ai-chip">會議資料何時提供？</button></div>
     <form id="ai-form" class="ai-input"><input id="ai-question" placeholder="請輸入您的問題…" autocomplete="off"><button class="ai-send" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
   </div>
   <button id="ai-fab" class="ai-fab" aria-label="開啟 AI 會議小助手"><i class="fa-solid fa-robot"></i></button>
@@ -1020,7 +1020,8 @@
       {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'會前問卷是為了瞭解各校 AI 融入教務行政與教學的使用現況、導入瓶頸與需求，以及第一線常見的校園法律實務議題。調查結果將提供給專題講師，協助講師在會議研討與現場對談時，更精準回應大家的實務問題，因此請全體與會教務主任、實習主任於會前完成填寫。'},
       {keys:['如何報名','怎麼報名','報名方式','我要報名','研習登錄'],answer:'請登入新北市校務行政系統，進入「教師研習系統」完成本次會議的研習登錄，並同步填寫用餐調查（葷／素）。全程參與者可核發 7 小時研習時數。'},
       {keys:['聯絡','電話','信箱','窗口'],answer:'承辦與主辦單位的聯絡資訊，請參閱網站最下方的「聯絡資訊」區塊。'},
-      {keys:['議程','流程'],answer:'完整會議流程請點選網站導覽列的「大會議程」，即可查看最新議程內容。'}
+      {keys:['議程','流程'],answer:'完整會議流程請點選網站導覽列的「大會議程」，即可查看最新議程內容。'},
+      {keys:['會議資料何時提供','資料何時提供','會議資料','資料什麼時候','何時提供資料'],answer:'會議資料將於會議前提供，請持續留意本網站「無紙化資料」區塊的最新公告與下載資訊。'}
     ];
     function addMsg(text,who='bot'){const d=document.createElement('div');d.className='ai-msg '+(who==='user'?'ai-user':'ai-bot');d.textContent=text;aiMessages.appendChild(d);aiMessages.scrollTop=aiMessages.scrollHeight;}
     function answerAI(q){const hit=meetingQA.find(item=>item.keys.some(k=>q.includes(k)));return hit?hit.answer:'我目前是「會議專屬小助手」，可以協助回答會議日期、地點、交通接駁、停車、議程、講師、會前調查與聯絡資訊。您也可以換個方式再問一次 😊';}
