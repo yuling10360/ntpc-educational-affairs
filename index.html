@@ -84,11 +84,10 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #fb7185;
     }
-  
+   
     /* AI 會議小助手 */
     .ai-fab{position:fixed;right:24px;bottom:24px;z-index:70;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:#fff;box-shadow:0 14px 35px rgba(225,29,72,.28);display:flex;align-items:center;justify-content:center;font-size:25px;cursor:pointer;border:0;transition:.2s}.ai-fab:hover{transform:translateY(-3px) scale(1.03)}
     .ai-chat{position:fixed;right:24px;bottom:100px;z-index:70;width:min(390px,calc(100vw - 32px));height:540px;max-height:70vh;background:rgba(255,255,255,.98);border:1px solid rgba(254,205,211,.9);border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,.2);display:none;overflow:hidden;flex-direction:column}.ai-chat.open{display:flex}.ai-header{padding:16px 18px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:white;display:flex;align-items:center;justify-content:space-between}.ai-messages{flex:1;overflow-y:auto;padding:16px;background:#fffaf8}.ai-msg{max-width:88%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:14px;line-height:1.6;white-space:pre-wrap}.ai-bot{background:white;border:1px solid #fde2e7;color:#334155}.ai-user{background:#ffe4e6;margin-left:auto;color:#881337}.ai-suggestions{padding:8px 14px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #f1f5f9}.ai-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff1f2;color:#be123c;border:1px solid #fecdd3;cursor:pointer}.ai-input{display:flex;padding:12px;gap:8px;border-top:1px solid #e2e8f0;background:white}.ai-input input{flex:1;border:1px solid #cbd5e1;border-radius:14px;padding:10px 12px;outline:none}.ai-send{border:0;border-radius:14px;padding:0 14px;background:#e11d48;color:#fff;cursor:pointer}
-
   </style>
 </head>
 <body class="relative min-h-screen">
@@ -131,7 +130,7 @@
         </div>
 
         <div class="hidden sm:block">
-          <a href="https://script.google.com/macros/s/AKfycbwJRzd-MBzqjPSphxDVuQP1-QamEwDnteQ99V6CCLshFajc7fYZkkhjp7C6-NXKz9Qd/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
+          <a href="https://script.google.com/macros/s/AKfycbx9lsbtof7RLY3bu9znE5Rb7859JvQVLHs2l1h8zPDDEVnNGBfQH_nltOg8rdBCG3E/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
             <i class="fa-solid fa-clipboard-question"></i> 填寫會前調查
           </a>
         </div>
@@ -250,7 +249,7 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="https://script.google.com/macros/s/AKfycbwJRzd-MBzqjPSphxDVuQP1-QamEwDnteQ99V6CCLshFajc7fYZkkhjp7C6-NXKz9Qd/exec" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+        <a href="https://script.google.com/macros/s/AKfycbx9lsbtof7RLY3bu9znE5Rb7859JvQVLHs2l1h8zPDDEVnNGBfQH_nltOg8rdBCG3E/exec" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
           <i class="fa-solid fa-pen-to-square"></i> 立即填寫會前調查表單
         </a>
         <a href="#agenda" class="px-7 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-slate-700 font-bold text-sm sm:text-base border border-slate-300 transition flex items-center gap-2 shadow-sm">
@@ -261,7 +260,7 @@
     </div>
   </section>
 
-  <!-- ==================== 會前相關調查專區（置頂・濃縮成一題） ==================== -->
+  <!-- ==================== 會前相關調查專區 ==================== -->
   <section id="surveys" class="py-16 relative z-10 bg-white/75 border-y-2 border-rose-200/80">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -297,7 +296,7 @@
           </div>
 
           <div class="w-full md:w-auto flex-shrink-0">
-            <a href="https://script.google.com/macros/s/AKfycbwJRzd-MBzqjPSphxDVuQP1-QamEwDnteQ99V6CCLshFajc7fYZkkhjp7C6-NXKz9Qd/exec" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
+            <a href="https://script.google.com/macros/s/AKfycbx9lsbtof7RLY3bu9znE5Rb7859JvQVLHs2l1h8zPDDEVnNGBfQH_nltOg8rdBCG3E/exec" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
               <span>前往填寫調查表單</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
             </a>
@@ -305,7 +304,7 @@
         </div>
       </div>
 
-      <!-- 加大加粗研習登錄提醒 -->
+      <!-- 研習登錄提醒 -->
       <div class="mt-6 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-400 border-2 border-amber-500/80 shadow-xl text-slate-900 flex flex-col md:flex-row items-center justify-between gap-5">
         <div class="flex items-center space-x-4">
           <div class="w-14 h-14 rounded-2xl bg-slate-900 text-amber-300 flex items-center justify-center text-2xl flex-shrink-0 shadow-md">
@@ -370,7 +369,7 @@
     </div>
   </section>
 
-  <!-- 大會議程（流程表） Section -->
+  <!-- 大會議程 Section -->
   <section id="agenda" class="py-20 relative z-10 border-t border-rose-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -406,36 +405,241 @@
           <span class="text-xs font-semibold bg-amber-50 text-amber-600 px-3 py-1 rounded-full border border-amber-200 self-start sm:self-center">樟樹實中團隊</span>
         </div>
 
-        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-rose-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="flex items-start sm:items-center space-x-4">
-            <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
-              09:30 - 09:45
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="text-base font-bold text-slate-800">115年新北市教務有功人員表揚 及技職 AI+P 創新暨卓越 Skills Power 頒獎</h4>
-                <i class="fa-solid fa-award text-amber-500"></i>
+        <!-- 09:30 - 09:45 頒獎 1（教務有功獲獎學校與個人） -->
+        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-rose-500 flex flex-col justify-between gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center space-x-4">
+              <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
+                09:30 - 09:45
               </div>
-              <p class="text-slate-500 text-xs sm:text-sm mt-0.5">表彰深耕教務與實習創新之卓越團隊與個人</p>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-base font-bold text-slate-800">115年新北市教務有功人員表揚 及技職 AI+P 創新暨卓越 Skills Power 頒獎</h4>
+                  <i class="fa-solid fa-award text-amber-500"></i>
+                </div>
+                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">表彰深耕教務與實習創新之卓越團隊與個人</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2 self-start sm:self-center flex-shrink-0">
+              <button onclick="toggleAwardList('award-list-1', 'award-btn-1')" id="award-btn-1" class="px-3.5 py-1.5 rounded-xl bg-rose-100 hover:bg-rose-200 text-rose-700 text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <span>檢視表揚名冊</span>
+                <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-300"></i>
+              </button>
+              <span class="text-xs font-semibold text-rose-600">榮譽表揚</span>
             </div>
           </div>
-          <span class="text-xs font-semibold text-rose-600 self-start sm:self-center">榮譽表揚</span>
+
+          <!-- 下拉獲獎名冊清單 1 -->
+          <div id="award-list-1" class="hidden mt-3 pt-3 border-t border-rose-100/80 transition-all duration-300">
+            <div class="bg-white/95 rounded-xl p-4 border border-rose-200 text-xs text-slate-700 space-y-4">
+              
+              <!-- 學校組 -->
+              <div>
+                <div class="font-bold text-rose-700 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-school-flag text-rose-500"></i> 115年度教務有功獲獎學校（國高中組）
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-100">
+                    <span class="font-bold text-rose-800">【國中一般組】</span>
+                    <span class="font-semibold text-slate-800 ml-1">新北市立中山國民中學</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-100">
+                    <span class="font-bold text-rose-800">【高中職一般組】</span>
+                    <span class="font-semibold text-slate-800 ml-1">新北市立淡水高級商工職業學校</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 個人組 -->
+              <div class="border-t border-dashed border-rose-200 pt-3">
+                <div class="font-bold text-rose-700 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-user-check text-rose-500"></i> 115年度教務有功獲獎個人（國高中組）
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/50 border border-rose-100">
+                    <div class="text-[11px] text-rose-600 font-bold">國中一般組</div>
+                    <div class="font-bold text-slate-900 mt-0.5">李宜茜 主任</div>
+                    <div class="text-[11px] text-slate-500">新北市立自強國民中學</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-rose-50/50 border border-rose-100">
+                    <div class="text-[11px] text-rose-600 font-bold">國中一般組</div>
+                    <div class="font-bold text-slate-900 mt-0.5">陳建元 主任</div>
+                    <div class="text-[11px] text-slate-500">新北市立育林國民中學</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-rose-50/50 border border-rose-100">
+                    <div class="text-[11px] text-rose-600 font-bold">高中職一般組</div>
+                    <div class="font-bold text-slate-900 mt-0.5">馬莉莉 主任</div>
+                    <div class="text-[11px] text-slate-500">新北市立永平高級中學</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-rose-50/50 border border-rose-100">
+                    <div class="text-[11px] text-rose-600 font-bold">高中職一般組</div>
+                    <div class="font-bold text-slate-900 mt-0.5">洪鈺旻 主任</div>
+                    <div class="text-[11px] text-slate-500">新北市立三重高級商工職業學校</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-rose-50/50 border border-rose-100">
+                    <div class="text-[11px] text-rose-600 font-bold">高中職偏鄉組</div>
+                    <div class="font-bold text-slate-900 mt-0.5">江昭蓉 主任</div>
+                    <div class="text-[11px] text-slate-500">新北市立石碇高級中學</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 技職 AI+P 創新卓越獎 -->
+              <div class="border-t border-dashed border-rose-200 pt-3">
+                <div class="font-bold text-amber-700 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-trophy text-amber-500"></i> 技職 AI+P 創新暨卓越 Skills Power 獲獎團隊
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
+                  <div class="p-2 rounded-lg bg-amber-50/70 border border-amber-100 font-medium">
+                    <span class="font-bold text-slate-900">卓越領航獎：</span>新北市立樟樹國際實創高級中等學校
+                  </div>
+                  <div class="p-2 rounded-lg bg-amber-50/70 border border-amber-100 font-medium">
+                    <span class="font-bold text-slate-900">AI創新技術推手：</span>各得獎公私立技術型高中團隊
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="flex items-start sm:items-center space-x-4">
-            <div class="px-3.5 py-1.5 rounded-xl bg-amber-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
-              09:45 - 10:00
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="text-base font-bold text-slate-800">閱讀融入課程教學之教學示例與試題徵選頒獎</h4>
-                <i class="fa-solid fa-book-open-reader text-rose-500"></i>
+        <!-- 09:45 - 10:00 頒獎 2（已完整置入 114 閱讀融入課程教學示例與試題甄選名單） -->
+        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 flex flex-col justify-between gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center space-x-4">
+              <div class="px-3.5 py-1.5 rounded-xl bg-amber-500 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-sm">
+                09:45 - 10:00
               </div>
-              <p class="text-slate-500 text-xs sm:text-sm mt-0.5">肯定教師在閱讀理解與素養評量設計上的卓越成果</p>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-base font-bold text-slate-800">閱讀融入課程教學之教學示例與試題徵選頒獎</h4>
+                  <i class="fa-solid fa-book-open-reader text-rose-500"></i>
+                </div>
+                <p class="text-slate-500 text-xs sm:text-sm mt-0.5">肯定教師在閱讀理解與素養評量設計上的卓越成果</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-start sm:self-center flex-shrink-0">
+              <button onclick="toggleAwardList('award-list-2', 'award-btn-2')" id="award-btn-2" class="px-3.5 py-1.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-800 text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <span>檢視得獎名單</span>
+                <i class="fa-solid fa-chevron-down text-[11px] transition-transform duration-300"></i>
+              </button>
+              <span class="text-xs font-semibold text-amber-600">隆重頒獎</span>
             </div>
           </div>
-          <span class="text-xs font-semibold text-amber-600 self-start sm:self-center">隆重頒獎</span>
+
+          <!-- 下拉獲獎名冊清單 2（完整獲獎名單） -->
+          <div id="award-list-2" class="hidden mt-3 pt-3 border-t border-amber-100/80 transition-all duration-300">
+            <div class="bg-white/95 rounded-xl p-4 border border-amber-200 text-xs text-slate-700 space-y-4">
+              
+              <!-- 類別一：教學示例甄選 - 團體組 -->
+              <div>
+                <div class="font-bold text-amber-800 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-people-group text-amber-600"></i> 教學示例甄選－團體組
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-200">
+                    <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">特優</span>
+                    <div class="font-bold text-slate-900 mt-1">石碇高中</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：海洋奇「援」</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200">
+                    <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold text-[10px]">優選</span>
+                    <div class="font-bold text-slate-900 mt-1">自強國中</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：遇見動物同學：從閱讀、觀察到動手做的守護任務</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200">
+                    <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold text-[10px]">優選</span>
+                    <div class="font-bold text-slate-900 mt-1">五峰國中</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：島是船，海是路</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 類別二：教學示例甄選 - 個人組 -->
+              <div class="border-t border-dashed border-amber-200 pt-3">
+                <div class="font-bold text-amber-800 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-chalkboard-user text-amber-600"></i> 教學示例甄選－個人組
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-200">
+                    <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">特優</span>
+                    <div class="font-bold text-slate-900 mt-1">新泰國中 李岳庭</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：廁所「廁」展趣：古人文青真面目</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200">
+                    <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold text-[10px]">優選</span>
+                    <div class="font-bold text-slate-900 mt-1">五峰國中 張庭芳</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：遇見我心裡的B612</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200">
+                    <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold text-[10px]">優選</span>
+                    <div class="font-bold text-slate-900 mt-1">秀峰高中(國中部) 曾麗君</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：從難民到鄰人：世界議題深度閱讀</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                    <span class="px-2 py-0.5 rounded bg-slate-600 text-white font-bold text-[10px]">佳作</span>
+                    <div class="font-bold text-slate-900 mt-1">板橋國中 賴文玉</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：餐桌上的生命必修課</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                    <span class="px-2 py-0.5 rounded bg-slate-600 text-white font-bold text-[10px]">佳作</span>
+                    <div class="font-bold text-slate-900 mt-1">鶯歌國中 林妮臻</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：「藝」眼查真相：數位偵探的新美館五感實境秀</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                    <span class="px-2 py-0.5 rounded bg-slate-600 text-white font-bold text-[10px]">佳作</span>
+                    <div class="font-bold text-slate-900 mt-1">三多國中 李怡真</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：戲台上的虛與實——布袋戲跨域閱讀與永續行動</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 類別三：試題甄選 - 個人組 -->
+              <div class="border-t border-dashed border-amber-200 pt-3">
+                <div class="font-bold text-amber-800 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-file-pen text-amber-600"></i> 試題甄選－個人組
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-200">
+                    <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">特優</span>
+                    <div class="font-bold text-slate-900 mt-1">中平國中 林志軒</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：生活科技「不尬電」</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-amber-50/70 border border-amber-200">
+                    <span class="px-2 py-0.5 rounded bg-amber-600 text-white font-bold text-[10px]">優選</span>
+                    <div class="font-bold text-slate-900 mt-1">中平國中 洪欣慧</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：震震有詞</div>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                    <span class="px-2 py-0.5 rounded bg-slate-600 text-white font-bold text-[10px]">佳作</span>
+                    <div class="font-bold text-slate-900 mt-1">育林國中 田承鈞</div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：塑化危機，地球「塑」造中</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 類別四：新北說書人 - 個人組 -->
+              <div class="border-t border-dashed border-amber-200 pt-3">
+                <div class="font-bold text-amber-800 text-sm flex items-center gap-1.5 mb-2">
+                  <i class="fa-solid fa-microphone-lines text-amber-600"></i> 新北說書人－個人組
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-2">
+                  <div class="p-2.5 rounded-lg bg-rose-50/70 border border-rose-200">
+                    <span class="px-2 py-0.5 rounded bg-rose-600 text-white font-bold text-[10px]">特優</span>
+                    <div class="font-bold text-slate-900 mt-1">福和國中 張美鳳 <span class="text-[11px] text-slate-500 font-normal">(現任永和國中)</span></div>
+                    <div class="text-slate-500 text-[11px] mt-0.5">主題：小王子沒有說的事</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-[11px] text-slate-500 text-right pt-1">
+                ※ 得獎教學示例與作品檔案已同步上架至下方「無紙化會議資料 ➔ 講師簡報與研討資料」供全體教師下載研讀。
+              </div>
+
+            </div>
+          </div>
         </div>
 
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-rose-200">
@@ -533,7 +737,7 @@
     </div>
   </section>
 
-  <!-- ==================== 四大無紙化資料下載（已綁定專屬 Google 雲端硬碟連結） ==================== -->
+  <!-- 四大無紙化資料下載 Section -->
   <section id="downloads" class="py-20 relative z-10 bg-white/70 border-y border-rose-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -713,7 +917,7 @@
     </div>
   </section>
 
-  <!-- ==================== 會場地點與交通指引 Section ==================== -->
+  <!-- 會場地點與交通指引 Section -->
   <section id="venue" class="py-20 relative z-10 bg-white/60 border-t border-rose-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -723,7 +927,7 @@
         <p class="text-slate-600 text-sm">淡水將捷鬱金香酒店（新北市淡水區中正路一段2號 / 滬尾藝文休閒園區）</p>
       </div>
 
-      <!-- 三大核心交通方式卡片（清爽首頁版） -->
+      <!-- 三大核心交通方式卡片 -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         
         <!-- 1. 大會免費接駁專車 -->
@@ -761,7 +965,7 @@
           </div>
         </div>
 
-        <!-- 3. 自駕行車與停車資訊（合併精簡卡片） -->
+        <!-- 3. 自駕行車與停車資訊 -->
         <div class="warm-glass-card rounded-3xl p-6 border-2 border-slate-300 bg-slate-50/50 flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-slate-800 text-amber-300 flex items-center justify-center text-xl mb-4 shadow-md">
@@ -772,7 +976,6 @@
               園區備有地下收費停車場（B1/B2），平日 NT$40/時。<strong>依實施計畫不提供免費折抵</strong>。
             </p>
           </div>
-          <!-- 點選展開按鈕 -->
           <button onclick="toggleDrivingDetails()" id="toggle-driving-btn" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm">
             <span>點選了解自駕路線與停車指引</span>
             <i id="toggle-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
@@ -781,7 +984,7 @@
 
       </div>
 
-      <!-- ==================== 點選後展開的自駕與停車詳細資訊區塊（可收合） ==================== -->
+      <!-- 自駕與停車詳細指引（可收合） -->
       <div id="driving-details-container" class="hidden transition-all duration-500 ease-in-out">
         <div class="warm-glass-card rounded-3xl p-6 sm:p-8 border-2 border-amber-300 shadow-xl bg-gradient-to-br from-white via-amber-50/20 to-rose-50/20 animate-fade-in">
           
@@ -800,7 +1003,6 @@
             </a>
           </div>
 
-          <!-- 自駕三大出發方向 -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
             <!-- 方向一 -->
             <div class="bg-white/90 p-4 sm:p-5 rounded-2xl border border-rose-200">
@@ -837,7 +1039,6 @@
             </div>
           </div>
 
-          <!-- 🅿️ 停車收費與注意事項細節 -->
           <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-slate-700 space-y-1.5">
             <p><strong>🅿️ 園區停車場位置：</strong>飯店附設於「滬尾藝文休閒園區」地下收費停車場（B1/B2），入口位於中正路一段車道旁。</p>
             <p><strong>💰 現場收費標準：</strong>平日約 NT$40 / 小時、假日約 NT$80 / 小時。</p>
@@ -920,7 +1121,6 @@
     </div>
   </footer>
 
-
   <!-- AI 會議小助手 -->
   <div id="ai-chat" class="ai-chat" aria-label="AI 會議小助手">
     <div class="ai-header"><div class="font-bold"><i class="fa-solid fa-robot mr-2"></i>AI 會議小助手</div><button id="ai-close" class="text-white text-xl" aria-label="關閉">&times;</button></div>
@@ -929,7 +1129,6 @@
     <form id="ai-form" class="ai-input"><input id="ai-question" placeholder="請輸入您的問題…" autocomplete="off"><button class="ai-send" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
   </div>
   <button id="ai-fab" class="ai-fab" aria-label="開啟 AI 會議小助手"><i class="fa-solid fa-robot"></i></button>
-
 
   <!-- 互動腳本與柔和粉黃背景動畫 -->
   <script>
@@ -956,6 +1155,24 @@
         container.classList.add('hidden');
         icon.classList.remove('rotate-180');
         btn.querySelector('span').innerText = '點選了解自駕路線與停車指引';
+      }
+    }
+
+    // 展開/收合獲獎名單 (Accordion)
+    function toggleAwardList(containerId, btnId) {
+      const list = document.getElementById(containerId);
+      const btn = document.getElementById(btnId);
+      const icon = btn.querySelector('i');
+      const textSpan = btn.querySelector('span');
+
+      if (list.classList.contains('hidden')) {
+        list.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+        textSpan.innerText = '收起名冊';
+      } else {
+        list.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+        textSpan.innerText = containerId === 'award-list-1' ? '檢視表揚名冊' : '檢視得獎名單';
       }
     }
 
@@ -1008,7 +1225,7 @@
     }
     animate();
 
-    // AI 會議小助手（第一階段：會議專屬知識庫）
+    // AI 會議小助手
     const aiFab=document.getElementById('ai-fab'), aiChat=document.getElementById('ai-chat'), aiClose=document.getElementById('ai-close'), aiMessages=document.getElementById('ai-messages'), aiForm=document.getElementById('ai-form'), aiQuestion=document.getElementById('ai-question');
     const meetingQA=[
       {keys:['日期','幾號','什麼時候','開始','時間'],answer:'115年11月3日（星期二）09:00開始。 如有異動，以本網站最新公告為準。'},
@@ -1027,7 +1244,6 @@
     function answerAI(q){const hit=meetingQA.find(item=>item.keys.some(k=>q.includes(k)));return hit?hit.answer:'我目前是「會議專屬小助手」，可以協助回答會議日期、地點、交通接駁、停車、議程、講師、會前調查與聯絡資訊。您也可以換個方式再問一次 😊';}
     function askAI(q){q=q.trim();if(!q)return;addMsg(q,'user');setTimeout(()=>addMsg(answerAI(q),'bot'),250);aiQuestion.value='';}
     aiFab.addEventListener('click',()=>{aiChat.classList.add('open');aiQuestion.focus();});aiClose.addEventListener('click',()=>aiChat.classList.remove('open'));aiForm.addEventListener('submit',e=>{e.preventDefault();askAI(aiQuestion.value);});document.querySelectorAll('.ai-chip').forEach(b=>b.addEventListener('click',()=>askAI(b.textContent)));
-
   </script>
 </body>
 </html>
