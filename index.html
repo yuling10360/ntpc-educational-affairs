@@ -87,7 +87,7 @@
    
     /* AI 會議小助手 */
     .ai-fab{position:fixed;right:24px;bottom:24px;z-index:70;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:#fff;box-shadow:0 14px 35px rgba(225,29,72,.28);display:flex;align-items:center;justify-content:center;font-size:25px;cursor:pointer;border:0;transition:.2s}.ai-fab:hover{transform:translateY(-3px) scale(1.03)}
-    .ai-chat{position:fixed;right:24px;bottom:100px;z-index:70;width:min(390px,calc(100vw - 32px));height:540px;max-height:70vh;background:rgba(255,255,255,.98);border:1px solid rgba(254,205,211,.9);border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,.2);display:none;overflow:hidden;flex-direction:column}.ai-chat.open{display:flex}.ai-header{padding:16px 18px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:white;display:flex;align-items:center;justify-content:space-between}.ai-messages{flex:1;overflow-y:auto;padding:16px;background:#fffaf8}.ai-msg{max-width:88%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:14px;line-line-height:1.6;white-space:pre-wrap}.ai-bot{background:white;border:1px solid #fde2e7;color:#334155}.ai-user{background:#ffe4e6;margin-left:auto;color:#881337}.ai-suggestions{padding:8px 14px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #f1f5f9}.ai-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff1f2;color:#be123c;border:1px solid #fecdd3;cursor:pointer}.ai-input{display:flex;padding:12px;gap:8px;border-top:1px solid #e2e8f0;background:white}.ai-input input{flex:1;border:1px solid #cbd5e1;border-radius:14px;padding:10px 12px;outline:none}.ai-send{border:0;border-radius:14px;padding:0 14px;background:#e11d48;color:#fff;cursor:pointer}
+    .ai-chat{position:fixed;right:24px;bottom:100px;z-index:70;width:min(390px,calc(100vw - 32px));height:540px;max-height:70vh;background:rgba(255,255,255,.98);border:1px solid rgba(254,205,211,.9);border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,.2);display:none;overflow:hidden;flex-direction:column}.ai-chat.open{display:flex}.ai-header{padding:16px 18px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:white;display:flex;align-items:center;justify-content:space-between}.ai-messages{flex:1;overflow-y:auto;padding:16px;background:#fffaf8}.ai-msg{max-width:88%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:14px;line-height:1.6;white-space:pre-wrap}.ai-bot{background:white;border:1px solid #fde2e7;color:#334155}.ai-user{background:#ffe4e6;margin-left:auto;color:#881337}.ai-suggestions{padding:8px 14px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #f1f5f9}.ai-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff1f2;color:#be123c;border:1px solid #fecdd3;cursor:pointer}.ai-input{display:flex;padding:12px;gap:8px;border-top:1px solid #e2e8f0;background:white}.ai-input input{flex:1;border:1px solid #cbd5e1;border-radius:14px;padding:10px 12px;outline:none}.ai-send{border:0;border-radius:14px;padding:0 14px;background:#e11d48;color:#fff;cursor:pointer}
   </style>
 </head>
 <body class="relative min-h-screen">
@@ -183,9 +183,10 @@
         </div>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight mb-6 text-slate-800">
-        <span class="block mb-2 text-2xl sm:text-4xl md:text-5xl text-slate-700 font-extrabold">新北市115學年度</span>
-        <span class="warm-gradient-text">國高中教務主任暨實習主任會議</span>
+      <!-- 放大處理的主標題區塊 -->
+      <h1 class="font-black tracking-tight leading-none mb-6 text-slate-800">
+        <span class="block mb-3 text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-800 font-extrabold tracking-tight">新北市115學年度</span>
+        <span class="block warm-gradient-text text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-tight">國高中教務主任暨實習主任會議</span>
       </h1>
 
       <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-10">
@@ -193,59 +194,65 @@
         攜手各級中等學校教務與實習領航者，建立校際共識，共創智慧教育成效！
       </p>
 
-      <!-- 重點卡片 -->
+      <!-- 重點卡片（字體全面放大加粗處理） -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-10 text-left">
-        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80">
-          <div class="flex items-center space-x-3.5">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
+        
+        <!-- 1. 會議日期時間 -->
+        <div class="warm-glass-card rounded-2xl p-6 border border-rose-200/80">
+          <div class="flex items-center space-x-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
               <i class="fa-regular fa-calendar-days"></i>
             </div>
             <div>
-              <div class="text-xs text-slate-500 font-semibold">會議日期時間</div>
-              <div class="text-sm font-bold text-slate-800">115年11月3日 (二)</div>
-              <div class="text-xs text-rose-600 font-bold">09:00 - 16:30 (7小時研習)</div>
+              <div class="text-sm font-bold text-slate-500">會議日期時間</div>
+              <div class="text-base sm:text-lg font-black text-slate-800 mt-0.5">115年11月3日 (二)</div>
+              <div class="text-xs sm:text-sm text-rose-600 font-black mt-0.5">09:00 - 16:30 (7小時研習)</div>
             </div>
           </div>
         </div>
 
-        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80">
-          <div class="flex items-center space-x-3.5">
-            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl flex-shrink-0">
+        <!-- 2. 會議地點 -->
+        <div class="warm-glass-card rounded-2xl p-6 border border-amber-200/80">
+          <div class="flex items-center space-x-4">
+            <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
               <i class="fa-solid fa-hotel"></i>
             </div>
             <div>
-              <div class="text-xs text-slate-500 font-semibold">會議地點</div>
-              <div class="text-sm font-bold text-slate-800">淡水將捷鬱金香酒店</div>
-              <div class="text-xs text-slate-500">新北市淡水區中正路一段2號</div>
+              <div class="text-sm font-bold text-slate-500">會議地點</div>
+              <div class="text-base sm:text-lg font-black text-slate-800 mt-0.5">淡水將捷鬱金香酒店</div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">新北市淡水區中正路一段2號</div>
             </div>
           </div>
         </div>
 
-        <div class="warm-glass-card rounded-2xl p-5 border border-rose-200/80">
-          <div class="flex items-center space-x-3.5">
-            <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl flex-shrink-0">
+        <!-- 3. 參加對象 -->
+        <div class="warm-glass-card rounded-2xl p-6 border border-rose-200/80">
+          <div class="flex items-center space-x-4">
+            <div class="w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
               <i class="fa-solid fa-users-gear"></i>
             </div>
             <div>
-              <div class="text-xs text-slate-500 font-semibold">參加對象</div>
-              <div class="text-sm font-bold text-slate-800">公私立高中職及國中</div>
-              <div class="text-xs text-slate-500">教務主任、實習主任及科室代表</div>
+              <div class="text-sm font-bold text-slate-500">參加對象</div>
+              <div class="text-base sm:text-lg font-black text-slate-800 mt-0.5">公私立高中職及國中</div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">教務主任、實習主任及代表</div>
             </div>
           </div>
         </div>
 
-        <div class="warm-glass-card rounded-2xl p-5 border border-amber-200/80">
-          <div class="flex items-center space-x-3.5">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
+        <!-- 4. 承辦單位 -->
+        <div class="warm-glass-card rounded-2xl p-6 border border-amber-200/80">
+          <div class="flex items-center space-x-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">
               <i class="fa-solid fa-school-flag"></i>
             </div>
             <div>
-              <div class="text-xs text-slate-500 font-semibold">承辦單位</div>
-              <div class="text-sm font-bold text-slate-800">新北市立樟樹實中</div>
-              <div class="text-xs text-slate-500">主辦：新北市政府教育局</div>
+              <div class="text-sm font-bold text-slate-500">承辦單位</div>
+              <div class="text-base sm:text-lg font-black text-slate-800 mt-0.5">新北市立樟樹實中</div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">主辦：新北市政府教育局</div>
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="flex flex-wrap justify-center gap-4">
@@ -437,16 +444,16 @@
               <!-- 學校組 -->
               <div>
                 <div class="font-black text-rose-700 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-school-flag text-rose-500"></i> 115年度教務有功獲獎學校（國高中組）
+                  <i class="fa-solid fa-school-flag text-rose-500"></i> 115年度教務有功獲獎學校（國高中組）[cite: 1]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
                     <span class="font-bold text-rose-800 text-sm sm:text-base">【國中一般組】</span>
-                    <span class="font-extrabold text-slate-900 text-base sm:text-lg ml-1">新北市立中山國民中學</span>
+                    <span class="font-extrabold text-slate-900 text-base sm:text-lg ml-1">新北市立中山國民中學</span>[cite: 1]
                   </div>
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
                     <span class="font-bold text-rose-800 text-sm sm:text-base">【高中職一般組】</span>
-                    <span class="font-extrabold text-slate-900 text-base sm:text-lg ml-1">新北市立淡水高級商工職業學校</span>
+                    <span class="font-extrabold text-slate-900 text-base sm:text-lg ml-1">新北市立淡水高級商工職業學校</span>[cite: 1]
                   </div>
                 </div>
               </div>
@@ -454,33 +461,33 @@
               <!-- 個人組 -->
               <div class="border-t border-dashed border-rose-200 pt-4">
                 <div class="font-black text-rose-700 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-user-check text-rose-500"></i> 115年度教務有功獲獎個人（國高中組）
+                  <i class="fa-solid fa-user-check text-rose-500"></i> 115年度教務有功獲獎個人（國高中組）[cite: 1]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
                     <div class="text-xs sm:text-sm text-rose-600 font-black">國中一般組</div>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">李宜茜 主任</div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立自強國民中學</div>
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">李宜茜 主任</div>[cite: 1]
+                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立自強國民中學</div>[cite: 1]
                   </div>
                   <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
                     <div class="text-xs sm:text-sm text-rose-600 font-black">國中一般組</div>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">陳建元 主任</div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立育林國民中學</div>
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">陳建元 主任</div>[cite: 1]
+                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立育林國民中學</div>[cite: 1]
                   </div>
                   <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
                     <div class="text-xs sm:text-sm text-rose-600 font-black">高中職一般組</div>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">馬莉莉 主任</div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立永平高級中學</div>
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">馬莉莉 主任</div>[cite: 1]
+                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立永平高級中學</div>[cite: 1]
                   </div>
                   <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
                     <div class="text-xs sm:text-sm text-rose-600 font-black">高中職一般組</div>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">洪鈺旻 主任</div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立三重高級商工職業學校</div>
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">洪鈺旻 主任</div>[cite: 1]
+                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立三重高級商工職業學校</div>[cite: 1]
                   </div>
                   <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
                     <div class="text-xs sm:text-sm text-rose-600 font-black">高中職偏鄉組</div>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">江昭蓉 主任</div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立石碇高級中學</div>
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">江昭蓉 主任</div>[cite: 1]
+                    <div class="text-xs sm:text-sm text-slate-600 mt-0.5">新北市立石碇高級中學</div>[cite: 1]
                   </div>
                 </div>
               </div>
@@ -528,23 +535,23 @@
               <!-- 類別一：教學示例甄選 - 團體組 -->
               <div>
                 <div class="font-black text-amber-800 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-people-group text-amber-600"></i> 教學示例甄選－團體組
+                  <i class="fa-solid fa-people-group text-amber-600"></i> 教學示例甄選－團體組[cite: 2]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">石碇高中</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：海洋奇「援」</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">石碇高中</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：海洋奇「援」</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">自強國中</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：遇見動物同學：從閱讀、觀察到動手做的守護任務</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">自強國中</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：遇見動物同學：從閱讀、觀察到動手做的守護任務</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">五峰國中</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：島是船，海是路</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">五峰國中</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：島是船，海是路</div>[cite: 2]
                   </div>
                 </div>
               </div>
@@ -552,38 +559,38 @@
               <!-- 類別二：教學示例甄選 - 個人組 -->
               <div class="border-t border-dashed border-amber-200 pt-4">
                 <div class="font-black text-amber-800 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-chalkboard-user text-amber-600"></i> 教學示例甄選－個人組
+                  <i class="fa-solid fa-chalkboard-user text-amber-600"></i> 教學示例甄選－個人組[cite: 2]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">新泰國中 李岳庭</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：廁所「廁」展趣：古人文青真面目</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">新泰國中 李岳庭</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：廁所「廁」展趣：古人文青真面目</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">五峰國中 張庭芳</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：遇見我心裡的B612</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">五峰國中 張庭芳</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：遇見我心裡的B612</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">秀峰高中(國中部) 曾麗君</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：從難民到鄰人：世界議題深度閱讀</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">秀峰高中(國中部) 曾麗君</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：從難民到鄰人：世界議題深度閱讀</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">板橋國中 賴文玉</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：餐桌上的生命必修課</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">板橋國中 賴文玉</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：餐桌上的生命必修課</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">鶯歌國中 林妮臻</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：「藝」眼查真相：數位偵探的新美館五感實境秀</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">鶯歌國中 林妮臻</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：「藝」眼查真相：數位偵探的新美館五感實境秀</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">三多國中 李怡真</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：戲台上的虛與實——布袋戲跨域閱讀與永續行動</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">三多國中 李怡真</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：戲台上的虛與實——布袋戲跨域閱讀與永續行動</div>[cite: 2]
                   </div>
                 </div>
               </div>
@@ -591,23 +598,23 @@
               <!-- 類別三：試題甄選 - 個人組 -->
               <div class="border-t border-dashed border-amber-200 pt-4">
                 <div class="font-black text-amber-800 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-file-pen text-amber-600"></i> 試題甄選－個人組
+                  <i class="fa-solid fa-file-pen text-amber-600"></i> 試題甄選－個人組[cite: 2]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">中平國中 林志軒</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：生活科技「不尬電」</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">中平國中 林志軒</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：生活科技「不尬電」</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">中平國中 洪欣慧</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：震震有詞</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-amber-600 text-white font-black text-xs">優選</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">中平國中 洪欣慧</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：震震有詞</div>[cite: 2]
                   </div>
                   <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">育林國中 田承鈞</div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：塑化危機，地球「塑」造中</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-600 text-white font-black text-xs">佳作</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">育林國中 田承鈞</div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：塑化危機，地球「塑」造中</div>[cite: 2]
                   </div>
                 </div>
               </div>
@@ -615,13 +622,13 @@
               <!-- 類別四：新北說書人 - 個人組 -->
               <div class="border-t border-dashed border-amber-200 pt-4">
                 <div class="font-black text-amber-800 text-base sm:text-lg flex items-center gap-2 mb-3">
-                  <i class="fa-solid fa-microphone-lines text-amber-600"></i> 新北說書人－個人組
+                  <i class="fa-solid fa-microphone-lines text-amber-600"></i> 新北說書人－個人組[cite: 2]
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-1 sm:pl-2">
                   <div class="p-3.5 rounded-xl bg-rose-50/80 border border-rose-200">
-                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>
-                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">福和國中 張美鳳 <span class="text-xs sm:text-sm text-slate-500 font-normal">(現任永和國中)</span></div>
-                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：小王子沒有說的事</div>
+                    <span class="px-2.5 py-0.5 rounded-md bg-rose-600 text-white font-black text-xs">特優</span>[cite: 2]
+                    <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">福和國中 張美鳳 <span class="text-xs sm:text-sm text-slate-500 font-normal">(現任永和國中)</span></div>[cite: 2]
+                    <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：小王子沒有說的事</div>[cite: 2]
                   </div>
                 </div>
               </div>
