@@ -784,7 +784,7 @@
             </div>
             <h3 class="text-xl font-black text-slate-800 mb-2">工作手冊</h3>
             <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-             涵蓋本局各科室各項重點工作項目及說明。
+               涵蓋本局各科室各項重點工作項目及說明。
             </p>
           </div>
           <div class="pt-4 border-t border-amber-100 flex items-center justify-between">
@@ -934,21 +934,21 @@
       <!-- 三大核心交通方式卡片 -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         
-        <!-- 1. 大會免費接駁專車 -->
-        <div class="warm-glass-card rounded-3xl p-6 border-2 border-rose-300 bg-rose-50/40 flex flex-col justify-between">
+        <!-- 1. 大會免費接駁專車 (特別凸顯捷運淡水站) -->
+        <div class="warm-glass-card rounded-3xl p-6 border-2 border-rose-400 bg-rose-50/70 flex flex-col justify-between shadow-lg">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-rose-500/20">
+            <div class="w-12 h-12 rounded-2xl bg-rose-600 text-white flex items-center justify-center text-xl mb-4 shadow-md shadow-rose-500/20">
               <i class="fa-solid fa-van-shuttle"></i>
             </div>
-            <h3 class="text-base sm:text-lg font-black text-slate-800 mb-2">大會免費接駁專車</h3>
-            <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
-              <li><i class="fa-solid fa-clock text-rose-500 mr-1.5"></i><strong>集合發車：</strong>11/3 上午 <strong>08:30 準時發車</strong></li>
-              <li><i class="fa-solid fa-map-pin text-rose-500 mr-1.5"></i><strong>集合地點：</strong><strong>捷運淡水站</strong></li>
-              <li><i class="fa-solid fa-rotate-left text-rose-500 mr-1.5"></i><strong>賦歸接駁：</strong>16:30 閉幕後專車返回</li>
+            <h3 class="text-base sm:text-lg font-black text-rose-900 mb-2">大會免費接駁專車</h3>
+            <ul class="text-xs sm:text-sm text-slate-700 space-y-2">
+              <li><i class="fa-solid fa-clock text-rose-600 mr-1.5"></i><strong>集合發車：</strong>11/3 上午 <strong>08:30 準時發車</strong></li>
+              <li><i class="fa-solid fa-map-pin text-rose-600 mr-1.5 text-base animate-bounce"></i><strong>集合地點：</strong><strong class="text-rose-700 underline decoration-2 underline-offset-2 bg-rose-200/60 px-1.5 py-0.5 rounded">捷運淡水站</strong></li>
+              <li><i class="fa-solid fa-rotate-left text-rose-600 mr-1.5"></i><strong>賦歸接駁：</strong>16:30 閉幕後專車返回</li>
             </ul>
           </div>
-          <div class="mt-4 pt-3 border-t border-rose-200/60 text-xs font-bold text-rose-700">
-            ★ 建議主任多加利用專車接駁
+          <div class="mt-4 pt-3 border-t border-rose-300/80 text-xs font-black text-rose-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-star text-amber-500"></i> 強力建議主任多加利用「捷運淡水站」專車接駁！
           </div>
         </div>
 
@@ -1128,7 +1128,7 @@
   <!-- AI 會議小助手 -->
   <div id="ai-chat" class="ai-chat" aria-label="AI 會議小助手">
     <div class="ai-header"><div class="font-bold"><i class="fa-solid fa-robot mr-2"></i>AI 會議小助手</div><button id="ai-close" class="text-white text-xl" aria-label="關閉">&times;</button></div>
-    <div id="ai-messages" class="ai-messages"><div class="ai-msg ai-bot">您好！我是「115學年度國高中教務主任暨實習主任會議」小助手 🤖<br>我可以協助回答會議日期、地點、交通、接駁、議程、講師與聯絡資訊。</div></div>
+    <div id="ai-messages" class="ai-messages"><div class="ai-msg ai-bot">您好！我是「115學年度國高中教務主任暨實習主任會議」小助手 🤖<br>我可以協助回答會議日期,地點,交通接駁,停車與議程資訊。</div></div>
     <div class="ai-suggestions"><button class="ai-chip">會議幾點開始？</button><button class="ai-chip">會議地點在哪裡？</button><button class="ai-chip">有接駁車嗎？</button><button class="ai-chip">有哪些講師？</button><button class="ai-chip">為何要寫問卷？</button><button class="ai-chip">如何報名？</button><button class="ai-chip">會議資料何時提供？</button></div>
     <form id="ai-form" class="ai-input"><input id="ai-question" placeholder="請輸入您的問題…" autocomplete="off"><button class="ai-send" type="submit"><i class="fa-solid fa-paper-plane"></i></button></form>
   </div>
@@ -1234,8 +1234,8 @@
     const meetingQA=[
       {keys:['日期','幾號','什麼時候','開始','時間'],answer:'115年11月3日（星期二）09:00開始。 如有異動，以本網站最新公告為準。'},
       {keys:['地點','在哪','地址','會場'],answer:'淡水將捷鬱金香酒店。 如有異動，以本網站最新公告為準。'},
-      {keys:['接駁','捷運','淡水站'],answer:'有。 如有異動，以本網站最新公告為準。'},
-      {keys:['停車','開車','自駕'],answer:'有地下收費停車場。 如有異動，以本網站最新公告為準。'},
+      {keys:['接駁','捷運','淡水站'],answer:'大會備有免費接駁專車，集合地點在「捷運淡水站」，上午 08:30 準時發車，歡迎多加利用！'},
+      {keys:['停車','開車','自駕'],answer:'有地下收費停車場（不提供免費折抵）。 如有異動，以本網站最新公告為準。'},
       {keys:['講師','演講','專題'],answer:'彭智標主任、蔡宗翰教授、陳禹農律師。 如有異動，以本網站最新公告為準。'},
       {keys:['調查','表單','填寫'],answer:'請點選網站上的「前往填寫調查表單」。 如有異動，以本網站最新公告為準。'},
       {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'為了蒐集各校AI使用現況、導入需求及校園法律實務問題，提供講師作為會議研討參考。 如有異動，以本網站最新公告為準。'},
