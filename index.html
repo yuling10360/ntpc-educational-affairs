@@ -673,41 +673,40 @@
           <span class="text-xs font-medium text-amber-700 self-start sm:self-center">15 mins</span>
         </div>
 
-        <!-- 專題演講 A：10:30 - 11:15 -->
-        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-rose-300 bg-rose-50/40 flex flex-col justify-between gap-4">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div class="flex items-center space-x-4">
-              <div class="px-3.5 py-1.5 rounded-xl bg-rose-600 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-md">
-                10:30 - 11:15
+        <!-- 專題演講 A 與 B（同時段平行分組） -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- 講題 A：彭智標主任 -->
+          <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-rose-300 bg-rose-50/40 flex flex-col justify-between gap-4">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div class="px-3.5 py-1.5 rounded-xl bg-rose-600 text-white font-bold text-xs tracking-wider font-mono shadow-md inline-block w-max">
+                  10:30 - 12:00
+                </div>
+                <span class="text-xs font-bold bg-rose-200 text-rose-800 px-3 py-1 rounded-full w-max">講題 A（分組場地一）</span>
               </div>
-              <div>
-                <span class="text-xs font-bold text-rose-600 uppercase tracking-wider block">Keynote Speech A</span>
-                <h4 class="text-base sm:text-lg font-extrabold text-slate-800">專題演講：AI 於教務行政工作之應用與實踐</h4>
+              <h4 class="text-base sm:text-lg font-extrabold text-slate-800 mb-2">專題演講 A：&lt;讓AI成為教務行政小幫手&gt;</h4>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3"><strong>講師：彭智標 主任</strong>（苗栗縣永貞國小 / 臺灣教育產業工會副理事長）</p>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-rose-100 text-rose-800 text-xs font-bold">
+                <i class="fa-solid fa-laptop"></i> 本場次請自行攜帶筆電或平板參與
               </div>
             </div>
-            <span class="text-xs font-bold bg-rose-200 text-rose-800 px-3 py-1 rounded-full self-start sm:self-center">45 mins 焦點專題</span>
           </div>
-          <div class="bg-white/80 p-4 rounded-xl border border-rose-100 text-xs sm:text-sm text-slate-600 space-y-1">
-            <p><strong>主講講師：彭智標 主任</strong>（苗栗縣永貞國小 / 臺灣教育產業工會副理事長）</p>
-          </div>
-        </div>
 
-        <!-- 專題演講 B：11:15 - 12:00 -->
-        <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-amber-300 bg-amber-50/40 flex flex-col justify-between gap-4">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div class="flex items-center space-x-4">
-              <div class="px-3.5 py-1.5 rounded-xl bg-amber-600 text-white font-bold text-sm tracking-wider font-mono flex-shrink-0 shadow-md">
-                11:15 - 12:00
+          <!-- 講題 B：蔡宗翰教授 -->
+          <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-2 border-amber-300 bg-amber-50/40 flex flex-col justify-between gap-4">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div class="px-3.5 py-1.5 rounded-xl bg-amber-600 text-white font-bold text-xs tracking-wider font-mono shadow-md inline-block w-max">
+                  10:30 - 12:00
+                </div>
+                <span class="text-xs font-bold bg-amber-200 text-amber-800 px-3 py-1 rounded-full w-max">講題 B（分組場地二）</span>
               </div>
-              <div>
-                <span class="text-xs font-bold text-amber-700 uppercase tracking-wider block">Keynote Speech B</span>
-                <h4 class="text-base sm:text-lg font-extrabold text-slate-800">專題演講：AI 於教學現場之應用與跨域創新</h4>
+              <h4 class="text-base sm:text-lg font-extrabold text-slate-800 mb-2">專題演講 B：&lt;把 AI 變成教務處的同事：從工具到代理的實作&gt;</h4>
+              <p class="text-xs sm:text-sm text-slate-600 mb-3"><strong>講師：蔡宗翰 教授</strong>（中央大學資工系 / 中研院人社中心 /《寫給中學生看的AI課》作者）</p>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-100 text-amber-900 text-xs font-bold">
+                <i class="fa-solid fa-laptop"></i> 本場次請自行攜帶筆電或平板參與
               </div>
             </div>
-            <span class="text-xs font-bold bg-amber-200 text-amber-800 px-3 py-1 rounded-full self-start sm:self-center">45 mins 焦點專題</span>
-          </div>
-          <div class="bg-white/80 p-4 rounded-xl border border-amber-100 text-xs sm:text-sm text-slate-600 space-y-1">
-            <p><strong>主講講師：蔡宗翰 教授</strong>（中央大學資工系 / 中研院人社中心 /《寫給中學生看的AI課》作者）</p>
           </div>
         </div>
 
@@ -877,18 +876,21 @@
                 <i class="fa-solid fa-chalkboard-user"></i>
               </div>
               <div>
-                <span class="text-xs text-rose-600 font-bold block">上午專題講師 A</span>
+                <span class="text-xs text-rose-600 font-bold block">上午專題講座 A（平行場地一）</span>
                 <h3 class="text-lg font-bold text-slate-800">彭智標 主任</h3>
                 <p class="text-xs text-slate-500">苗栗縣永貞國小 / 臺灣教育產業工會副理事長</p>
               </div>
             </div>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              專長於找到行政工作底層規律，化繁為簡，致力於探討如何運用 AI 與結構化工具為教育現場行政減負。
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-3">
+              講題：&lt;讓AI成為教務行政小幫手&gt;
             </p>
+            <div class="text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 p-2 rounded-xl">
+              <i class="fa-solid fa-laptop mr-1"></i> 請自行攜帶筆電或平板參與
+            </div>
           </div>
-          <div class="pt-4 mt-6 border-t border-rose-100 flex items-center justify-between text-xs text-slate-500">
-            <span>10:30 - 11:15</span>
-            <span class="font-semibold text-rose-600">AI 教務行政應用</span>
+          <div class="pt-4 mt-4 border-t border-rose-100 flex items-center justify-between text-xs text-slate-500">
+            <span>10:30 - 12:00</span>
+            <span class="font-semibold text-rose-600">講題 A：教務行政應用</span>
           </div>
         </div>
 
@@ -905,13 +907,16 @@
                 <p class="text-xs text-slate-500">中央大學資工系 / 中研院人社中心</p>
               </div>
             </div>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              被譽為「AI 界李白」，《寫給中學生看的AI課》作者，橫跨理工與人文領域，深耕生成式 AI 數位人文教育。
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-3">
+              講題：&lt;把 AI 變成教務處的同事：從工具到代理的實作&gt;
             </p>
+            <div class="text-[11px] font-bold text-amber-800 bg-amber-50 border border-amber-200 p-2 rounded-xl">
+              <i class="fa-solid fa-laptop mr-1"></i> 請自行攜帶筆電或平板參與
+            </div>
           </div>
-          <div class="pt-4 mt-6 border-t border-amber-100 flex items-center justify-between text-xs text-slate-500">
-            <span>11:15 - 12:00</span>
-            <span class="font-semibold text-amber-600">AI 教學現場跨域</span>
+          <div class="pt-4 mt-4 border-t border-amber-100 flex items-center justify-between text-xs text-slate-500">
+            <span>10:30 - 12:00</span>
+            <span class="font-semibold text-amber-600">講題 B：教學現場跨域</span>
           </div>
         </div>
 
@@ -1255,7 +1260,8 @@
       {keys:['地點','在哪','地址','會場'],answer:'淡水將捷鬱金香酒店。 如有異動，以本網站最新公告為準。'},
       {keys:['接駁','捷運','淡水站'],answer:'大會備有免費接駁專車，集合地點在「捷運淡水站」，上午 08:30 準時發車，歡迎多加利用！'},
       {keys:['停車','開車','自駕'],answer:'有地下收費停車場（不提供免費折抵）。 如有異動，以本網站最新公告為準。'},
-      {keys:['講師','演講','專題','彭智標','蔡宗翰','陳禹農'],answer:'上午專題演講 A 由彭智標主任主講「AI 於教務行政工作之應用與實踐」(10:30-11:15)；專題演講 B 由蔡宗翰教授主講「AI 於教學現場之應用與跨域創新」(11:15-12:00)；下午由陳禹農律師主講法律實務。'},
+      {keys:['講師','演講','專題','彭智標','蔡宗翰','陳禹農'],answer:'上午 10:30 - 12:00 同時段進行兩個平行專題講座（兩場皆需自行攜帶筆電或平板參與）：\n1. 彭智標主任主講「讓AI成為教務行政小幫手」\n2. 蔡宗翰教授主講「把 AI 變成教務處的同事：從工具到代理的實作」。\n下午則由陳禹農律師主講法律實務。'},
+      {keys:['筆電','平板','電腦','攜帶'],answer:'上午的兩場專題講座（彭智標主任與蔡宗翰教授場次）皆請與會主任自行攜帶筆電或平板參與！'},
       {keys:['調查','表單','填寫'],answer:'請點選網站上的「前往填寫調查表單」。 如有異動，以本網站最新公告為準。'},
       {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'為了蒐集各校AI使用現況、導入需求及校園法律實務問題，提供講師作為會議研討參考。 如有異動，以本網站最新公告為準。'},
       {keys:['如何報名','怎麼報名','報名方式','我要報名','研習登錄'],answer:'請登入新北市校務行政系統的「教師研習系統」完成登錄。 如有異動，以本網站最新公告為準。'},
