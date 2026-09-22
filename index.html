@@ -120,7 +120,7 @@
 
         <!-- 電腦版選單 -->
         <div class="hidden lg:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold text-slate-600">
-          <a href="#surveys" class="px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50/90 hover:bg-rose-100 transition">會前各項調查</a>
+          <a href="#surveys" class="px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50/90 hover:bg-rose-100 transition">會前調查</a>
           <a href="#about" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">會議主旨</a>
           <a href="#agenda" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">大會議程</a>
           <a href="#downloads" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">無紙化資料</a>
@@ -129,10 +129,9 @@
           <a href="#contact" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">聯絡窗口</a>
         </div>
 
-        <!-- 導航右側：改為錨點直達專區，避免受獎者誤點 -->
         <div class="hidden sm:block">
-          <a href="#surveys" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
-            <i class="fa-solid fa-list-check"></i> 填寫會前調查
+          <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
+            <i class="fa-solid fa-clipboard-question"></i> 填寫會前調查
           </a>
         </div>
 
@@ -147,7 +146,7 @@
 
     <!-- 手機版選單 -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-rose-100 px-5 pt-3 pb-6 space-y-2 shadow-xl">
-      <a href="#surveys" class="block px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50">會前各項調查</a>
+      <a href="#surveys" class="block px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50">會前調查填報</a>
       <a href="#about" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">會議主旨</a>
       <a href="#agenda" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">大會議程</a>
       <a href="#downloads" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">無紙化會議資料</a>
@@ -256,24 +255,13 @@
 
       </div>
 
-      <!-- 主視覺分流按鈕區：雙按鈕清楚標示對象，徹底防呆 -->
-      <div class="flex flex-col items-center gap-3">
-        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-          
-          <!-- 入口 1：主任會前調查 -->
-          <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
-            <i class="fa-solid fa-user-tie"></i>
-            <span>【主任填寫】AI 使用與法律調查</span>
+      <!-- 首頁主視覺：已回復為乾淨的單一表單填報與議程瀏覽 -->
+      <div class="flex flex-col items-center gap-2">
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+            <i class="fa-solid fa-pen-to-square"></i> 立即填寫會前調查表單
           </a>
-
-          <!-- 入口 2：閱讀獲獎者專屬出席調查 -->
-          <a href="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
-            <i class="fa-solid fa-award"></i>
-            <span>【受獎者填寫】閱讀受獎出席調查</span>
-          </a>
-
-          <!-- 入口 3：議程瀏覽 -->
-          <a href="#agenda" class="px-6 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-slate-700 font-bold text-xs sm:text-sm border border-slate-300 transition flex items-center gap-2 shadow-sm">
+          <a href="#agenda" class="px-7 py-3.5 rounded-2xl warm-glass-card hover:bg-white text-slate-700 font-bold text-sm sm:text-base border border-slate-300 transition flex items-center gap-2 shadow-sm">
             <i class="fa-solid fa-list-check"></i> 瀏覽當日議程
           </a>
         </div>
@@ -292,86 +280,47 @@
           <i class="fa-solid fa-bell animate-bounce"></i> 重要填報事項
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-800">會議前相關調查</h2>
-        <p class="text-slate-600 text-sm mt-2">請與會主任與受獎學校/教師依身分點選對應表單完成填報，以利會務精準規劃。</p>
+        <p class="text-slate-600 text-sm mt-2">請全體與會教務主任、實習主任務必於會前完成填寫，以利講師於研討時精準回應現場實務問題。</p>
       </div>
 
-      <div class="space-y-6">
-        
-        <!-- 表單 1：AI 使用現況與法律實務提報（全體主任填寫） -->
-        <div class="warm-glass-card rounded-3xl p-7 sm:p-9 border-2 border-rose-300 shadow-xl bg-gradient-to-br from-white via-rose-50/30 to-amber-50/40 relative overflow-hidden">
-          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div class="space-y-3 flex-1">
-              <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 text-white flex items-center justify-center text-xl shadow-md shadow-rose-500/20 flex-shrink-0">
-                  <i class="fa-solid fa-clipboard-list"></i>
-                </div>
-                <div>
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[11px] font-black uppercase tracking-wider mb-1">對象：全體公私立國高中教務與實習主任</span>
-                  <h3 class="text-lg sm:text-xl font-black text-slate-800">學校 AI 使用現況與校園法律實務議題提報</h3>
-                </div>
+      <!-- 單一核心調查卡片：學校 AI 使用現況與校園法律實務議題提報（受獎調查已移除） -->
+      <div class="warm-glass-card rounded-3xl p-7 sm:p-9 border-2 border-rose-300 shadow-xl bg-gradient-to-br from-white via-rose-50/30 to-amber-50/40 relative overflow-hidden">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-3 flex-1">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 text-white flex items-center justify-center text-xl shadow-md shadow-rose-500/20 flex-shrink-0">
+                <i class="fa-solid fa-clipboard-list"></i>
               </div>
-
-              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1">
-                本調查彙整大會核心主題，包含：<strong>① 各校 AI 融入教務行政與教學之使用狀況</strong> 及 <strong>② 第一線常見校園法律爭議案例（管教權限、著作權、實習合約等）</strong>。調查結果將全數交由專題講師進行現場對談與精闢解析。
-              </p>
-
-              <!-- 瀏覽器使用提醒標籤 -->
-              <div class="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs font-bold flex items-center gap-2">
-                <i class="fa-brands fa-chrome text-amber-600 text-base"></i>
-                <span>填寫提醒：建議使用 Google Chrome 瀏覽器開啟填寫表單，以確保排版與功能正常運作。</span>
-              </div>
-
-              <div class="flex flex-wrap gap-2 text-xs text-slate-600 pt-1">
-                <span class="bg-white/80 border border-rose-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-robot text-rose-500 mr-1"></i> AI 導入瓶頸與需求</span>
-                <span class="bg-white/80 border border-amber-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-scale-balanced text-amber-500 mr-1"></i> 校園法律 33 講實務提問</span>
+              <div>
+                <span class="text-xs font-extrabold text-rose-600 tracking-wide uppercase">會前整合調查</span>
+                <h3 class="text-lg sm:text-xl font-black text-slate-800">學校 AI 使用現況與校園法律實務議題提報</h3>
               </div>
             </div>
 
-            <div class="w-full md:w-auto flex-shrink-0 flex flex-col items-center gap-1.5">
-              <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
-                <span>主任前往填寫</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
-              </a>
-              <span class="text-[11px] text-slate-500 font-medium">（開新視窗・建議 Chrome）</span>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1">
+              本調查彙整大會核心主題，包含：<strong>① 各校 AI 融入教務行政與教學之使用狀況</strong> 及 <strong>② 第一線常見校園法律爭議案例（管教權限、著作權、實習合約等）</strong>。調查結果將全數交由專題講師進行現場對談與精闢解析。
+            </p>
+
+            <!-- 瀏覽器使用提醒標籤 -->
+            <div class="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs font-bold flex items-center gap-2">
+              <i class="fa-brands fa-chrome text-amber-600 text-base"></i>
+              <span>填寫提醒：建議使用 Google Chrome 瀏覽器開啟填寫表單，以確保排版與功能正常運作。</span>
+            </div>
+
+            <div class="flex flex-wrap gap-2 text-xs text-slate-600 pt-1">
+              <span class="bg-white/80 border border-rose-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-robot text-rose-500 mr-1"></i> AI 導入瓶頸與需求</span>
+              <span class="bg-white/80 border border-amber-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-scale-balanced text-amber-500 mr-1"></i> 校園法律 33 講實務提問</span>
             </div>
           </div>
-        </div>
 
-        <!-- 表單 2：閱讀獲獎學校及受獎人員出席與交通調查（專屬新視窗跳轉） -->
-        <div class="warm-glass-card rounded-3xl p-7 sm:p-9 border-2 border-amber-300 shadow-xl bg-gradient-to-br from-white via-amber-50/40 to-rose-50/20 relative overflow-hidden">
-          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div class="space-y-3 flex-1">
-              <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white flex items-center justify-center text-xl shadow-md shadow-amber-500/20 flex-shrink-0">
-                  <i class="fa-solid fa-book-open-reader"></i>
-                </div>
-                <div>
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-black uppercase tracking-wider mb-1">對象：閱讀教學示例甄選、試題徵選、新北說書人獲獎人員/學校代表</span>
-                  <h3 class="text-lg sm:text-xl font-black text-slate-800">閱讀受獎人員及受獎學校出席與交通調查</h3>
-                </div>
-              </div>
-
-              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1">
-                恭喜榮獲新北市「閱讀融入課程教學示例與試題甄選」殊榮！為妥善安排 11/3 (二) 頒獎典禮席位、上台受獎唱名動線、接駁車輛名額及午宴用餐規劃，請<strong>各獲獎學校代表或得獎教師</strong>撥冗完成本項出席登記。
-              </p>
-
-              <div class="flex flex-wrap gap-2 text-xs text-slate-600 pt-1">
-                <span class="bg-white/80 border border-amber-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-user-check text-rose-500 mr-1"></i> 親自出席 / 代理領獎確認</span>
-                <span class="bg-white/80 border border-amber-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-users text-amber-600 mr-1"></i> 團體組與會人員登記</span>
-                <span class="bg-white/80 border border-amber-200 px-3 py-1 rounded-lg"><i class="fa-solid fa-van-shuttle text-rose-500 mr-1"></i> 接駁車 / 停車車牌登記</span>
-              </div>
-            </div>
-
-            <div class="w-full md:w-auto flex-shrink-0 flex flex-col items-center gap-1.5">
-              <a href="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-500 to-pink-500 hover:from-amber-600 hover:to-rose-600 text-white font-extrabold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
-                <span>受獎代表填寫</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
-              </a>
-              <span class="text-[11px] text-slate-500 font-medium">（開新視窗填報）</span>
-            </div>
+          <div class="w-full md:w-auto flex-shrink-0 flex flex-col items-center gap-1.5">
+            <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-extrabold text-sm sm:text-base transition-all duration-300 shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
+              <span>前往填寫調查表單</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+            </a>
+            <span class="text-[11px] text-slate-500 font-medium">（建議以 Chrome 開啟）</span>
           </div>
         </div>
-
       </div>
 
       <!-- 研習登錄提醒 -->
@@ -566,7 +515,7 @@
           </div>
         </div>
 
-        <!-- 09:45 - 10:00 頒獎 2（閱讀頒獎名單與出席調查跳轉） -->
+        <!-- 09:45 - 10:00 頒獎 2（閱讀頒獎名單與專屬出席調查按鈕） -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 flex flex-col justify-between gap-3">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex items-start sm:items-center space-x-4">
@@ -595,7 +544,7 @@
           <div id="award-list-2" class="hidden mt-3 pt-4 border-t border-amber-100/80 transition-all duration-300">
             <div class="bg-white/95 rounded-2xl p-5 border border-amber-200 text-slate-800 space-y-5">
               
-              <!-- 頂端直達出席調查提示列（放大、防呆醒目） -->
+              <!-- 頂端直達出席調查提示列（醒目且只放在受獎名單處，完全不干擾首頁） -->
               <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-amber-100/70 to-rose-50 border-2 border-amber-300 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex items-center space-x-3.5">
                   <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 text-white flex items-center justify-center text-xl shadow-md shadow-rose-500/20 flex-shrink-0 animate-bounce">
@@ -1336,8 +1285,8 @@
       {keys:['停車','開車','自駕'],answer:'有地下收費停車場（不提供免費折抵）。 如有異動，以本網站最新公告為準。'},
       {keys:['講師','演講','專題','彭智標','蔡宗翰','陳禹農'],answer:'上午 10:30 - 12:00 同時段進行兩個平行專題講座（兩場皆需自行攜帶筆電或平板參與）：\n1. 彭智標主任主講「讓AI成為教務行政小幫手」\n2. 蔡宗翰教授主講「把 AI 變成教務處的同事：從工具到代理的實作」。\n下午則由陳禹農律師主講法律實務。'},
       {keys:['筆電','平板','電腦','攜帶'],answer:'上午的兩場專題講座（彭智標主任與蔡宗翰教授場次）皆請與會主任自行攜帶筆電或平板參與！'},
-      {keys:['調查','表單','填寫','問卷'],answer:'大會調查依對象分為兩項：\n1.「教務/實習主任」請填寫【學校 AI 使用現況與校園法律實務議題提報】。\n2.「閱讀獲獎學校/教師」請填寫【閱讀受獎人員及受獎學校出席與交通調查】。'},
-      {keys:['閱讀','獲獎','得獎','說書人','試題','示例'],answer:'獲獎學校或教師請點選首頁或會前調查專區的「【受獎者填寫】閱讀受獎出席調查」前往登記出席狀況與交通方式。'},
+      {keys:['調查','表單','填寫'],answer:'請點選網站上的「前往填寫調查表單」。 如有異動，以本網站最新公告為準。'},
+      {keys:['閱讀','獲獎','得獎','說書人','試題','示例'],answer:'獲獎學校或教師請至大會議程「閱讀融入課程教學之教學示例與試題徵選頒獎」展開得獎名單，點選上方「前往填寫出席調查」進行登記。'},
       {keys:['為何要寫問卷','為什麼要寫問卷','為什麼填問卷','為何填問卷','問卷目的','調查目的'],answer:'為了蒐集各校AI使用現況、導入需求及校園法律實務問題，提供講師作為會議研討參考。 如有異動，以本網站最新公告為準。'},
       {keys:['如何報名','怎麼報名','報名方式','我要報名','研習登錄'],answer:'請登入新北市校務行政系統的「教師研習系統」完成登錄。 如有異動，以本網站最新公告為準。'},
       {keys:['聯絡','電話','信箱','窗口'],answer:'請參閱網站最下方的「聯絡資訊」。 如有異動，以本網站最新公告為準。'},
