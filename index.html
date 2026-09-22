@@ -84,7 +84,7 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #fb7185;
     }
-   
+    
     /* AI 會議小助手 */
     .ai-fab{position:fixed;right:24px;bottom:24px;z-index:70;width:64px;height:64px;border-radius:999px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:#fff;box-shadow:0 14px 35px rgba(225,29,72,.28);display:flex;align-items:center;justify-content:center;font-size:25px;cursor:pointer;border:0;transition:.2s}.ai-fab:hover{transform:translateY(-3px) scale(1.03)}
     .ai-chat{position:fixed;right:24px;bottom:100px;z-index:70;width:min(390px,calc(100vw - 32px));height:540px;max-height:70vh;background:rgba(255,255,255,.98);border:1px solid rgba(254,205,211,.9);border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,.2);display:none;overflow:hidden;flex-direction:column}.ai-chat.open{display:flex}.ai-header{padding:16px 18px;background:linear-gradient(135deg,#e11d48,#f59e0b);color:white;display:flex;align-items:center;justify-content:space-between}.ai-messages{flex:1;overflow-y:auto;padding:16px;background:#fffaf8}.ai-msg{max-width:88%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:14px;line-height:1.6;white-space:pre-wrap}.ai-bot{background:white;border:1px solid #fde2e7;color:#334155}.ai-user{background:#ffe4e6;margin-left:auto;color:#881337}.ai-suggestions{padding:8px 14px;display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #f1f5f9}.ai-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff1f2;color:#be123c;border:1px solid #fecdd3;cursor:pointer}.ai-input{display:flex;padding:12px;gap:8px;border-top:1px solid #e2e8f0;background:white}.ai-input input{flex:1;border:1px solid #cbd5e1;border-radius:14px;padding:10px 12px;outline:none}.ai-send{border:0;border-radius:14px;padding:0 14px;background:#e11d48;color:#fff;cursor:pointer}
@@ -513,7 +513,7 @@
           </div>
         </div>
 
-        <!-- 09:45 - 10:00 頒獎 2 -->
+        <!-- 09:45 - 10:00 頒獎 2（內嵌閱讀調查表單） -->
         <div class="warm-glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 flex flex-col justify-between gap-3">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="flex items-start sm:items-center space-x-4">
@@ -640,6 +640,38 @@
                     <div class="font-extrabold text-slate-900 text-base sm:text-lg mt-1.5">福和國中 張美鳳 <span class="text-xs sm:text-sm text-slate-500 font-normal">(現任永和國中)</span></div>
                     <div class="text-slate-600 text-xs sm:text-sm font-medium mt-1">主題：小王子沒有說的事</div>
                   </div>
+                </div>
+              </div>
+
+              <!-- 閱讀受獎調查表單內嵌專區 (iframe) -->
+              <div class="border-t-2 border-amber-300 pt-6 mt-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white flex items-center justify-center text-base shadow-sm">
+                      <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-extrabold text-slate-900 text-base sm:text-lg">受獎人員及學校出席與交通調查</h4>
+                      <p class="text-xs text-slate-500">請獲獎學校或教師於會前填覆出席狀況、團體名單與交通需求</p>
+                    </div>
+                  </div>
+                  <a href="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="px-3.5 py-1.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-800 text-xs font-bold transition flex items-center gap-1.5 self-start sm:self-center shadow-sm">
+                    <span>另開全螢幕填寫</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                  </a>
+                </div>
+
+                <!-- iframe 容器 -->
+                <div class="w-full rounded-2xl overflow-hidden shadow-md border border-amber-200 bg-white" style="height: 850px;">
+                  <iframe 
+                    src="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" 
+                    class="w-full h-full border-0"
+                    loading="lazy"
+                    title="閱讀受獎人員及受獎學校出席與交通調查表單">
+                  </iframe>
                 </div>
               </div>
 
