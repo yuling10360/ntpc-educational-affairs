@@ -97,12 +97,12 @@
 
   <!-- 頂部導航列 -->
   <nav class="fixed top-0 left-0 right-0 z-50 warm-glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-2 sm:space-x-3">
           <!-- 導航列左側 Logo -->
-          <div class="bg-white/90 px-3 py-1.5 rounded-xl border border-rose-100 shadow-sm flex items-center">
-            <svg class="h-7 w-auto" viewBox="0 0 450 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="bg-white/90 px-2.5 sm:px-3 py-1.5 rounded-xl border border-rose-100 shadow-sm flex items-center">
+            <svg class="h-6 sm:h-7 w-auto" viewBox="0 0 450 110" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M45 10C20 25 10 55 15 85C25 80 40 75 55 75C70 75 80 85 85 95C90 65 80 30 45 10Z" fill="#78B828"/>
               <path d="M15 85C20 65 35 55 55 55C65 55 75 60 85 70C70 72 55 78 45 95C30 92 20 88 15 85Z" fill="#009944"/>
               <circle cx="50" cy="45" r="10" fill="#FFFFFF"/>
@@ -113,25 +113,31 @@
               <text x="95" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="25" letter-spacing="4" fill="#595757">NTPC AI EDU</text>
             </svg>
           </div>
-          <div class="hidden sm:block border-l border-slate-300 pl-3">
-            <h1 class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight">115學年國高中教務主任暨實習主任會議</h1>
+          <div class="hidden xl:block border-l border-slate-300 pl-3">
+            <h1 class="text-xs font-extrabold text-slate-800 tracking-tight">115學年國高中教務主任暨實習主任會議</h1>
           </div>
         </div>
 
         <!-- 電腦版選單 -->
-        <div class="hidden lg:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold text-slate-600">
-          <a href="#surveys" class="px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50/90 hover:bg-rose-100 transition">會前調查</a>
-          <a href="#about" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">會議主旨</a>
-          <a href="#agenda" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">大會議程</a>
-          <a href="#downloads" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">無紙化資料</a>
-          <a href="#speakers" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">專題講座</a>
-          <a href="#venue" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">交通與接駁</a>
-          <a href="#contact" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">聯絡窗口</a>
+        <div class="hidden lg:flex items-center space-x-1 text-xs xl:text-sm font-semibold text-slate-600">
+          <a href="#surveys" class="px-2.5 py-2 rounded-lg text-rose-600 font-bold bg-rose-50/90 hover:bg-rose-100 transition">會前調查</a>
+          <a href="#about" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">會議主旨</a>
+          <a href="#agenda" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">大會議程</a>
+          <a href="#downloads" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">無紙化資料</a>
+          <a href="#speakers" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">專題講座</a>
+          <a href="#venue" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">交通與接駁</a>
+          <a href="#contact" class="px-2.5 py-2 rounded-lg hover:text-rose-600 hover:bg-rose-50/80 transition">聯絡窗口</a>
         </div>
 
-        <div class="hidden sm:block">
-          <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-rose-500/20">
-            <i class="fa-solid fa-clipboard-question"></i> 填寫會前調查
+        <!-- 頂部導航列右側：兩個獨立按鈕（主任 vs 閱讀獲獎者） -->
+        <div class="hidden sm:flex items-center space-x-2">
+          <!-- 按鈕 1：主任會前調查 -->
+          <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white font-bold text-xs transition shadow-md shadow-rose-500/20 whitespace-nowrap">
+            <i class="fa-solid fa-user-tie"></i> 主任會前調查
+          </a>
+          <!-- 按鈕 2：閱讀獲獎者調查 -->
+          <a href="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs transition shadow-md shadow-amber-500/20 whitespace-nowrap">
+            <i class="fa-solid fa-award"></i> 閱讀獲獎調查
           </a>
         </div>
 
@@ -145,8 +151,16 @@
     </div>
 
     <!-- 手機版選單 -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-rose-100 px-5 pt-3 pb-6 space-y-2 shadow-xl">
-      <a href="#surveys" class="block px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50">會前調查填報</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-rose-100 px-5 pt-3 pb-6 space-y-2.5 shadow-xl">
+      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-rose-100">
+        <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-rose-500 text-white text-center font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-user-tie"></i> 主任會前調查
+        </a>
+        <a href="https://script.google.com/macros/s/AKfycbybwd5HGG3K2rD1AOp0LSHbnNpUlB5bZFroRgiW2FxbL8RyT98i4W6bdBgKcxehzMt_/exec" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-amber-500 text-white text-center font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-award"></i> 閱讀獲獎調查
+        </a>
+      </div>
+      <a href="#surveys" class="block px-3 py-2 rounded-lg text-rose-600 font-bold bg-rose-50">會前調查專區</a>
       <a href="#about" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">會議主旨</a>
       <a href="#agenda" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">大會議程</a>
       <a href="#downloads" class="block px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-rose-50 hover:text-rose-600">無紙化會議資料</a>
@@ -255,7 +269,7 @@
 
       </div>
 
-      <!-- 首頁主視覺：已回復為乾淨的單一表單填報與議程瀏覽 -->
+      <!-- 首頁主視覺下方行動按鈕 -->
       <div class="flex flex-col items-center gap-2">
         <div class="flex flex-wrap justify-center gap-4">
           <a href="https://script.google.com/macros/s/AKfycbw9yvldWqxhscfmPuhM3TftTwJ1CAshq5m8LZ2Uwh9Vw2-CgRUijw0PjIQAfESqatG8/exec" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -283,7 +297,7 @@
         <p class="text-slate-600 text-sm mt-2">請全體與會教務主任、實習主任務必於會前完成填寫，以利講師於研討時精準回應現場實務問題。</p>
       </div>
 
-      <!-- 單一核心調查卡片：學校 AI 使用現況與校園法律實務議題提報（受獎調查已移除） -->
+      <!-- 單一核心調查卡片：學校 AI 使用現況與校園法律實務議題提報 -->
       <div class="warm-glass-card rounded-3xl p-7 sm:p-9 border-2 border-rose-300 shadow-xl bg-gradient-to-br from-white via-rose-50/30 to-amber-50/40 relative overflow-hidden">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div class="space-y-3 flex-1">
@@ -544,7 +558,7 @@
           <div id="award-list-2" class="hidden mt-3 pt-4 border-t border-amber-100/80 transition-all duration-300">
             <div class="bg-white/95 rounded-2xl p-5 border border-amber-200 text-slate-800 space-y-5">
               
-              <!-- 頂端直達出席調查提示列（醒目且只放在受獎名單處，完全不干擾首頁） -->
+              <!-- 頂端直達出席調查提示列 -->
               <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-amber-100/70 to-rose-50 border-2 border-amber-300 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex items-center space-x-3.5">
                   <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-500 to-amber-500 text-white flex items-center justify-center text-xl shadow-md shadow-rose-500/20 flex-shrink-0 animate-bounce">
@@ -1296,7 +1310,7 @@
     function addMsg(text,who='bot'){const d=document.createElement('div');d.className='ai-msg '+(who==='user'?'ai-user':'ai-bot');d.textContent=text;aiMessages.appendChild(d);aiMessages.scrollTop=aiMessages.scrollHeight;}
     function answerAI(q){const hit=meetingQA.find(item=>item.keys.some(k=>q.includes(k)));return hit?hit.answer:'我目前是「會議專屬小助手」，可以協助回答會議日期、地點、交通接駁、停車、議程、講師、會前調查與聯絡資訊。您也可以換個方式再問一次 😊';}
     function askAI(q){q=q.trim();if(!q)return;addMsg(q,'user');setTimeout(()=>addMsg(answerAI(q),'bot'),250);aiQuestion.value='';}
-    aiFab.addEventListener('click',()=>{aiChat.classList.add('open');aiQuestion.focus();});aiClose.addEventListener('click',()=>aiChat.classList.remove('open'));aiForm.addEventListener('submit',e=>{e.preventDefault();askAI(aiQuestion.value);});document.querySelectorAll('.ai-chip').forEach(b=>b.addEventListener('click',()=>askAI(b.textContent)));
+    aiFab.addEventListener('click',()=>{aiChat.classList.open('open');aiQuestion.focus();});aiClose.addEventListener('click',()=>aiChat.classList.remove('open'));aiForm.addEventListener('submit',e=>{e.preventDefault();askAI(aiQuestion.value);});document.querySelectorAll('.ai-chip').forEach(b=>b.addEventListener('click',()=>askAI(b.textContent)));
   </script>
 </body>
 </html>
